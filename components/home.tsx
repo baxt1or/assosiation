@@ -8,7 +8,7 @@ export const Home = () => {
     return (
         <section className='w-full h-screen relative'>
             <video src="/dos.mp4" className="w-full h-full object-cover" autoPlay loop muted id="myVideo" />
-            <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+            <div className='max-w-7xl mx-auto '>
                 <div className="absolute h-full top-0 flex flex-col gap-y-4 justify-center items-start px-4 md:px-0 md:pl-20 md:w-1/2">
                     <h1 className="text-center md:text-left text-[#001561] font-extrabold text-2xl md:text-3xl md:text-4xl">
                         Ассоциация представительств иностранных фармацевтических компаний и производителей в Республике Узбекистан
