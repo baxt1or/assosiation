@@ -26,7 +26,7 @@ export default function RootLayout({
           color='#001561'
           showSpinner={false}
         />
-        <div className="w-full h-full">
+        <div className="w-full h-full overflow-x-hidden">
           {children}
         </div>
 
