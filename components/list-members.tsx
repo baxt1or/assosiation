@@ -17,7 +17,7 @@ export const ListOfMembers = async () => {
 
 
     return (
-        <section className="w-full h-auto bg-gray-50">
+        <section className="w-full h-auto bg-gray-50 overflow-hidden">
 
             <div className='p-14 max-w-7xl mx-auto gap-y-8'>
 
