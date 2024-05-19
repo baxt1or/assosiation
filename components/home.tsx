@@ -11,14 +11,14 @@ export const Home = () => {
         <section className='w-full h-screen relative'>
             <video src="/dos.mp4" className="w-full h-full object-cover" autoPlay loop muted id="myVideo" />
 
-            <div className='max-w-[1400px] mx-auto pl-4 '>
+            <div className='max-w-7xl mx-auto'>
                 <div
                     className="absolute h-full top-0 flex flex-col gap-y-4 justify-center items-start  md:pl-20  md:w-1/2"
                 >
 
                     <h1 className="text-center md:text-left text-[#001561] font-extrabold text-4xl">Ассоциация представительств иностранных фармацевтических компаний и производителей в Республике Узбекистан</h1>
 
-                    <div className='flex items-center gap-4'>
+                    <div className='flex items-center gap-4 pl-4 md:pl-0'>
 
 
                         <Link
