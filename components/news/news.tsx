@@ -8,11 +8,13 @@ export const News = async () => {
   const [news] = await Promise.all([newsData]);
 
   return (
-    <section className="bg-gray-50 p-16 ">
-      <div className="flex flex-col items-start gap-y-4 max-w-7xl mx-auto">
-        <h1 className="font-bold text-4xl text-[#001561]">Поздние новости</h1>
+    <section className="bg-gray-50 p-4">
+      <div className=" max-w-7xl mx-auto flex flex-col gap-y-8  py-6">
+        <h1 className="font-bold text-4xl text-[#001561] text-start">
+          Поздние новости
+        </h1>
 
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 ">
           {news.slice(0, 3).map((nw) => (
             <NewsCard
               key={nw.id}

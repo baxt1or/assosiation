@@ -9,7 +9,7 @@ export const ListOfMembers = async () => {
   const [members] = await Promise.all([data]);
 
   return (
-    <section className="w-full h-auto bg-gray-50 overflow-hidden p-14 ">
+    <section className="w-full h-auto bg-white overflow-hidden p-14 ">
       <div className=" gap-y-8 max-w-7xl mx-auto">
         <div className="flex items-center justify-between">
           <h1 className="text-4xl font-semibold text-[#001561]">Компании</h1>

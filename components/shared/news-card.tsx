@@ -11,7 +11,7 @@ type Props = {
 };
 export const NewsCard = ({ id, title, imgSrc, createdAt }: Props) => {
   return (
-    <div className=" w-auto h-auto rounded-lg shadow-md ring-0 ring-slate-900/5 p-4 bg-white">
+    <div className="w-[360px] h-auto rounded-lg shadow-md ring-0 ring-slate-900/5 p-4 bg-white">
       <div className="w-wull h-[200px] relative">
         <Image
           src={`https://dogovrrhdhdtxaylejbb.supabase.co/storage/v1/object/public/images/${imgSrc}`}

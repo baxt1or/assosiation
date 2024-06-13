@@ -5,7 +5,7 @@ import { buttonVariants } from "./ui/button";
 
 export const InfoAbout = () => {
   return (
-    <section className="h-full w-full bg-gray-50">
+    <section className="h-screen w-full bg-gray-50">
       <div className="max-w-7xl mx-auto h-full  items-center justify-center flex flex-col gap-y-8">
         <h1 className="text-4xl font-bold text-center">
           Полная информация о работе ассоциации

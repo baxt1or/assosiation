@@ -44,7 +44,7 @@ export const Header = () => {
   const pathname = usePathname();
 
   return (
-    <header className="fixed max-w-7xl mx-auto top-4 left-8 right-8 h-18 py-2 bg-[#001561] rounded-3xl  z-[1000] ">
+    <header className="fixed top-4 left-8 right-8 h-18 py-2 bg-[#001561] rounded-3xl  z-[1000] ">
       <nav className=" flex items-center justify-between px-2 pr-6">
         <Link href={"/"}>
           <Image src="/logo.png" alt="logo" width={62} height={62} />
