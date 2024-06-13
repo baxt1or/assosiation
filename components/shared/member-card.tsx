@@ -25,7 +25,7 @@ export const MemberCard = ({
   address,
 }: Props) => {
   return (
-    <div className="relative w-auto h-auto border border-gray-500 bg-white rounded-3xl p-4 flex flex-col gap-y-4 shadow-lg hover:translate-y-[-5px] transition-all">
+    <div className="relative w-[200px] h-[180px] border border-neutral-900/15  bg-white rounded-3xl p-4 flex flex-col gap-y-2 shadow-lg ">
       <Image
         src={`https://dogovrrhdhdtxaylejbb.supabase.co/storage/v1/object/public/images/${imgSrc}`}
         alt="logo"
@@ -33,11 +33,9 @@ export const MemberCard = ({
         height={100}
         className="w-full h-[100px] object-contain"
       />
-
       <h1 className="text-center font-semibold text-[#001561] text-sm">
         {title}
       </h1>
-
       <div className="flex gap-4 items-center justify-evenly mt-4">
         <HoverCard>
           <HoverCardTrigger>
