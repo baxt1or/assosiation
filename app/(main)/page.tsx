@@ -1,8 +1,6 @@
 import { About } from "@/components/About";
 import { Companies } from "@/components/Companies";
-
 import { Home } from "@/components/Home";
-
 import { MembersList } from "@/components/MembersList";
 import { NewsList } from "@/components/NewsList";
 
