@@ -1,5 +1,5 @@
 import { getNewsSingle } from "@/db/queries";
-import { Divide } from "lucide-react";
+
 import Image from "next/image";
 import { redirect } from "next/navigation";
 import React from "react";

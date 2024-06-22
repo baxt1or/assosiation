@@ -1,4 +1,4 @@
-import { Button, buttonVariants } from "./ui/button";
+import { buttonVariants } from "./ui/button";
 import { DialogForm } from "./shared/dialog";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
@@ -18,6 +18,7 @@ export const Home = () => {
         id="myVideo"
         aria-hidden="true"
       />
+
       <div className="max-w-7xl mx-auto">
         <div className="absolute h-full top-0 flex flex-col gap-y-4 justify-center items-start px-4 md:px-0 md:pl-20 md:w-1/2">
           <h1 className="text-center md:text-left text-[#001561] font-extrabold text-xl md:text-4xl">
@@ -26,9 +27,9 @@ export const Home = () => {
           </h1>
           <div className="flex items-center justify-center gap-4">
             <Link
-              href={"/news"}
+              href="/news"
               className={cn(
-                buttonVariants({ size: "lg", variant: "secondary" }),
+                buttonVariants({ size: "sm", variant: "secondary" }),
                 "px-8 py-4 md:px-12 md:py-8 text-[#001561] font-semibold text-base md:text-lg w-full"
               )}
             >

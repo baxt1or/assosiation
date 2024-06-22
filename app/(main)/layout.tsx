@@ -1,15 +1,15 @@
-import { Footer } from "@/components/footer";
-import { Header } from "@/components/header/header";
+import { Footers } from "@/components/Footers";
+import { Header } from "@/components/Navbar";
 
 import React from "react";
 
 const MainLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <>
+    <div className="flex flex-col min-h-screen">
       <Header />
-      {children}
-      <Footer />
-    </>
+      <main className="flex-grow ">{children}</main>
+      <Footers />
+    </div>
   );
 };
 

@@ -1,24 +1,19 @@
-import { Companies } from "@/components/companies";
-
-import { Home } from "@/components/home";
-import { InfoAbout } from "@/components/info";
-import { ListOfMembers } from "@/components/list-members";
-import { News } from "@/components/news/news";
-import { getMembers } from "@/db/queries";
-import { Info } from "lucide-react";
-import React from "react";
+import { About } from "@/components/About";
+import { Companies } from "@/components/Companies";
+import { Home } from "@/components/Home";
+import { MembersList } from "@/components/MembersList";
+import { NewsList } from "@/components/NewsList";
 
 const HomePage = () => {
   return (
     <>
       <Home />
-      <Companies />
-
-      <InfoAbout />
-
-      <ListOfMembers />
-
-      <News />
+      <div className="max-w-7xl mx-auto px-8">
+        <Companies />
+        <About />
+        <MembersList />
+        <NewsList />
+      </div>
     </>
   );
 };
