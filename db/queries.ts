@@ -50,37 +50,3 @@ export const getMember = cache(async (id: string) => {
 
   return data;
 });
-
-export type Member = {
-  id: string;
-  title: string;
-  imgSrc: string | null;
-  webLink: string | null;
-  email: string | null;
-  phone: string;
-  address: string | null;
-  createdAt: Date;
-  updatedAt: Date;
-};
-
-export type MembersResponse = {
-  data: Member[];
-  total: number;
-};
-
-export const getMemberses = cache(
-  async (page = 1, limit = 10): Promise<MembersResponse> => {
-    const offset = (page - 1) * limit;
-
-    const [data, total] = await Promise.all([
-      db.member.findMany({
-        orderBy: { createdAt: "desc" },
-        skip: offset,
-        take: limit,
-      }),
-      db.member.count(),
-    ]);
-
-    return { data, total };
-  }
-);

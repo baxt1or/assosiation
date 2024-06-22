@@ -4,6 +4,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Menu } from "lucide-react";
+import { DataTable } from "./DataTable";
 
 export const DropDownMenu = ({ children }: { children: React.ReactNode }) => {
   return (

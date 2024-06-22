@@ -4,20 +4,21 @@ import React from "react";
 import { createNews, deleteNews } from "@/actions/news";
 import { Button } from "@/components/ui/button";
 import { getNews } from "@/db/queries";
-import { DeleteButton } from "../_components/delete-button";
-import { DialogForm } from "@/components/shared/dialog";
+
+import { DataTable } from "@/components/DataTable";
+
 import { Textarea } from "@/components/ui/textarea";
-import Link from "next/link";
+import { DialogForm } from "@/components/shared/dialog";
+import { NewsColumns } from "@/components/colums";
 
 const NewsPage = async () => {
   const newsData = getNews();
   const [data] = await Promise.all([newsData]);
   return (
-    <div className="max-w-5xl mx-auto mt-12 p-2">
-      <div className="flex items-center justify-between p-2">
-        <h1 className="text-4xl font-extrabold">Новости </h1>
-
-        <DialogForm label="+ Добавить">
+    <div className="max-w-5xl mx-auto mt-24">
+      <h1 className="text-4xl font-bold text-black">Новости</h1>
+      <DataTable columns={NewsColumns} data={data}>
+        <DialogForm label="Добавить">
           <form action={createNews}>
             <div className="w-full flex flex-col items-center gap-y-12">
               <input
@@ -49,24 +50,7 @@ const NewsPage = async () => {
             </div>
           </form>
         </DialogForm>
-      </div>
-
-      <div className="flex flex-col mt-6 gap-y-4">
-        {data.map((news) => (
-          <div key={news.id} className="flex items-center justify-between p-2">
-            <p className="text-sm tracking-tighter text-black text-normal">
-              {news.title}
-            </p>
-
-            <div className="flex items-center gap-2">
-              <DeleteButton id={news.id} />
-              <Link href={`/dashboard/news/edit/${news.id}`}>
-                <PenBox className="w-5 h-5 text-green-500" />
-              </Link>
-            </div>
-          </div>
-        ))}
-      </div>
+      </DataTable>
     </div>
   );
 };

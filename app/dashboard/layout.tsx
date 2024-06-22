@@ -1,10 +1,6 @@
-import { DashboardSidebar } from "./_components/sidebar";
+import { DashboardSidebar } from "@/components/Sidebar";
 
-type Props = {
-  children: React.ReactNode;
-};
-
-const DashboardLayout = ({ children }: Props) => {
+const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <>
       <DashboardSidebar />
