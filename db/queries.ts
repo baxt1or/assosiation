@@ -58,6 +58,5 @@ export const getMember = cache(async (id: number) => {
 
 export const getStaffMembers = cache(async () => {
   const data = await db.faculty.findMany({});
-
   return data;
 });
