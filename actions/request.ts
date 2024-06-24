@@ -28,7 +28,7 @@ export const createRequest = async (values: formSchema) => {
   return data;
 };
 
-export const deleteRequest = async (id: string) => {
+export const deleteRequest = async (id: number) => {
   const data = await db.request.delete({
     where: {
       id: id,

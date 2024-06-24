@@ -2,7 +2,6 @@
 
 import db from "@/db/db";
 import { supabase } from "@/db/supabase";
-import { time } from "console";
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 
@@ -44,7 +43,7 @@ export const createMember = async (formData: FormData) => {
   return data;
 };
 
-export const deleteMember = async (id: string) => {
+export const deleteMember = async (id: number) => {
   const data = await db.member.delete({
     where: {
       id: id,
@@ -57,7 +56,7 @@ export const deleteMember = async (id: string) => {
   return data;
 };
 
-export const updateMember = async (id: string, formData: FormData) => {
+export const updateMember = async (id: number, formData: FormData) => {
   const title = formData.get("title") as string;
   const phone = formData.get("phone") as string;
   const webLink = formData.get("webLink") as string;

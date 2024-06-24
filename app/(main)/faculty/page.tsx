@@ -1,3 +1,4 @@
+import { getStaffMembers } from "@/db/queries";
 import Image from "next/image";
 import React from "react";
 
@@ -31,13 +32,15 @@ const persons = [
   },
 ];
 
-const StuffGroupPage = () => {
+const StuffGroupPage = async () => {
+  const requestData = getStaffMembers();
+  const [data] = await Promise.all([requestData]);
   return (
     <section className="max-w-7xl mx-auto mt-28 mb-12 px-12">
       <h1 className="text-4xl font-bold text-black">Сотрудники</h1>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6 ">
-        {persons.map((person) => (
+        {data.map((person) => (
           <div className="group" key={person.name}>
             <div className="grid grid-cols-1 md:grid-cols-1 gap-4  w-full h-full rounded-lg border p-2 transform duration-500 transition-all group-hover:scale-105">
               <div className="flex flex-col gap-y-8 items-center justify-center">
@@ -47,10 +50,10 @@ const StuffGroupPage = () => {
                   </h1>
                   <p className="text-xl text-[#001561] font-semibold text-center flex flex-col gap-y-1">
                     <span className="text-sm font-bold ">
-                      {person.position}{" "}
+                      {person.position}
                     </span>
                     <p className="text-sm text-muted-foreground mt-2">
-                      {person.company}
+                      {person.companyName}
                     </p>
                   </p>
                 </div>

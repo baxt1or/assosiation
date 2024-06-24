@@ -7,7 +7,7 @@ import {
 } from "@/components/ui/hover-card";
 
 type Props = {
-  id: string;
+  id: number;
   imgSrc: string;
   title: string;
   phoneNumber: string;

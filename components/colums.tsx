@@ -1,11 +1,16 @@
 "use client";
 
 import { formatDate } from "@/lib/utils";
-import { Member, News, Request } from "@prisma/client";
+import { Faculty, Member, News, Request } from "@prisma/client";
 import { ColumnDef } from "@tanstack/react-table";
 import Link from "next/link";
 import { PenBox } from "lucide-react";
-import { DeletMember, DeleteButton, DeleteRequest } from "./DeleteButtons";
+import {
+  DeletMember,
+  DeleteButton,
+  DeleteRequest,
+  DeleteStaffMember,
+} from "./DeleteButtons";
 
 export const NewsColumns: ColumnDef<News>[] = [
   {
@@ -20,8 +25,8 @@ export const NewsColumns: ColumnDef<News>[] = [
     accessorKey: "id",
     header: "ID",
     cell: ({ row }) => {
-      const data_id = row.getValue("id") as string;
-      return <p className="hidden">{data_id}</p>;
+      const data_id = row.getValue("id") as number;
+      return <p className="">{data_id}</p>;
     },
   },
   {
@@ -41,7 +46,7 @@ export const NewsColumns: ColumnDef<News>[] = [
     accessorKey: "id",
     header: "Удалить",
     cell: ({ row }) => {
-      const data_id = row.getValue("id") as string;
+      const data_id = row.getValue("id") as number;
       return (
         <div className="flex gap-2">
           <Link href={`/dashboard/news/edit/${data_id}`}>
@@ -79,7 +84,7 @@ export const MemberColums: ColumnDef<Member>[] = [
     accessorKey: "id",
     header: "ID",
     cell: ({ row }) => {
-      const data_id = row.getValue("id") as string;
+      const data_id = row.getValue("id") as number;
       return <p className="hidden">{data_id}</p>;
     },
   },
@@ -97,10 +102,10 @@ export const MemberColums: ColumnDef<Member>[] = [
   {
     id: "actions",
     enableHiding: false,
-    accessorKey: "id" as string,
+    accessorKey: "id",
     header: "Удалить",
     cell: ({ row }) => {
-      const data_id = row.getValue("id") as string;
+      const data_id = row.getValue("id") as number;
       return (
         <div className="flex gap-2">
           <Link href={`/dashboard/members/edit/${data_id}`}>
@@ -159,8 +164,52 @@ export const RequestColumns: ColumnDef<Request>[] = [
     accessorKey: "id",
     header: "Удалить",
     cell: ({ row }) => {
-      const data_id = row.getValue("id") as string;
+      const data_id = row.getValue("id") as number;
       return <DeleteRequest id={data_id} />;
+    },
+  },
+];
+
+export const StaffMembers: ColumnDef<Faculty>[] = [
+  {
+    accessorKey: "name",
+    header: "Name",
+  },
+  {
+    accessorKey: "position",
+    header: "Position",
+  },
+  {
+    accessorKey: "id",
+    header: "ID",
+    cell: ({ row }) => {
+      const data_id = row.getValue("id") as number;
+      return data_id;
+    },
+  },
+  {
+    accessorKey: "companyName",
+    header: "Company",
+  },
+  {
+    accessorKey: "id",
+    header: "ID",
+  },
+  {
+    id: "actions",
+    enableHiding: false,
+    accessorKey: "id",
+    header: "Удалить",
+    cell: ({ row }) => {
+      const data_id = row.getValue("id") as number;
+      return (
+        <div className="flex gap-2">
+          <Link href={`/dashboard/news/edit/${data_id}`}>
+            <PenBox className="w-5 h-5 text-green-500" />
+          </Link>
+          <DeleteStaffMember id={data_id} />
+        </div>
+      );
     },
   },
 ];

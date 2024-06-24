@@ -9,7 +9,6 @@ export const createNews = async (formData: FormData) => {
   const title = formData.get("title") as string;
   const content = formData.get("content") as string;
   const imgSrc = formData.get("imgSrc") as File;
-  const fileSrc = formData.get("fileSrc") as File;
 
   const { data: imgData } = await supabase.storage
     .from("images")
@@ -23,11 +22,15 @@ export const createNews = async (formData: FormData) => {
   //     contentType: "image/png"
   // })
 
+  if (!imgData) {
+    return null;
+  }
+
   const data = await db.news.create({
     data: {
       title: title,
       content: content,
-      imgSrc: imgData?.path,
+      imgSrc: imgData.path,
     },
   });
 
@@ -37,7 +40,7 @@ export const createNews = async (formData: FormData) => {
   return data;
 };
 
-export const deleteNews = async (id: string) => {
+export const deleteNews = async (id: number) => {
   const data = await db.news.delete({
     where: {
       id: id,
@@ -50,7 +53,7 @@ export const deleteNews = async (id: string) => {
   return data;
 };
 
-export const updateNews = async (id: string, formData: FormData) => {
+export const updateNews = async (id: number, formData: FormData) => {
   const title = formData.get("title") as string;
   const content = formData.get("content") as string;
 

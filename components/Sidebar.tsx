@@ -1,7 +1,7 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import { File, Home, InfoIcon, Newspaper, icons } from "lucide-react";
+import { File, Home, InfoIcon, Newspaper, User, icons } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
@@ -21,6 +21,11 @@ const links = [
     label: "Запросы",
     href: "/dashboard/requests",
     icon: <File />,
+  },
+  {
+    label: "Рабочая",
+    href: "/dashboard/staff",
+    icon: <User />,
   },
   {
     label: "О нас",
