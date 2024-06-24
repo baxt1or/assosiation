@@ -17,6 +17,14 @@ export const NewsColumns: ColumnDef<News>[] = [
     },
   },
   {
+    accessorKey: "id",
+    header: "ID",
+    cell: ({ row }) => {
+      const data_id = row.getValue("id") as string;
+      return <p className="hidden">{data_id}</p>;
+    },
+  },
+  {
     accessorKey: "createdAt",
     header: "Время",
     cell: ({ row }) => {
@@ -68,6 +76,14 @@ export const MemberColums: ColumnDef<Member>[] = [
     header: " Адрес",
   },
   {
+    accessorKey: "id",
+    header: "ID",
+    cell: ({ row }) => {
+      const data_id = row.getValue("id") as string;
+      return <p className="hidden">{data_id}</p>;
+    },
+  },
+  {
     accessorKey: "createdAt",
     header: "Время",
     cell: ({ row }) => {
@@ -81,7 +97,7 @@ export const MemberColums: ColumnDef<Member>[] = [
   {
     id: "actions",
     enableHiding: false,
-    accessorKey: "id",
+    accessorKey: "id" as string,
     header: "Удалить",
     cell: ({ row }) => {
       const data_id = row.getValue("id") as string;
@@ -101,6 +117,14 @@ export const RequestColumns: ColumnDef<Request>[] = [
   {
     accessorKey: "fullName",
     header: "Полное имя",
+  },
+  {
+    accessorKey: "id",
+    header: "ID",
+    cell: ({ row }) => {
+      const data_id = row.getValue("id") as string;
+      return <p className="hidden">{data_id}</p>;
+    },
   },
   {
     accessorKey: "position",
