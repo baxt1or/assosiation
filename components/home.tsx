@@ -1,8 +1,8 @@
 import { buttonVariants } from "./ui/button";
-import { DialogForm } from "./shared/dialog";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
-import { FormRequest } from "./shared/form";
+import { DialogForm } from "./Dialog";
+import { FormRequest } from "./RequestForm";
 
 export const Home = () => {
   return (

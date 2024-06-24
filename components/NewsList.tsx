@@ -5,7 +5,7 @@ export const NewsList = async () => {
   const newsData = getNews();
   const [news] = await Promise.all([newsData]);
   return (
-    <section className="py-24">
+    <section className="py-32">
       <h1 className="font-bold text-2xl md:text-4xl md:text-start text-[#001561] ">
         Поздние новости
       </h1>

@@ -3,9 +3,10 @@ import React from "react";
 import { getMembers } from "@/db/queries";
 import { createMember } from "@/actions/members";
 import { Button } from "@/components/ui/button";
-import { DialogForm } from "@/components/shared/dialog";
+
 import { DataTable } from "@/components/DataTable";
 import { MemberColums } from "@/components/colums";
+import { DialogForm } from "@/components/Dialog";
 
 const NewsDashboard = async () => {
   const data = await getMembers();

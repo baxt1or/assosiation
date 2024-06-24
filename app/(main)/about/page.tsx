@@ -1,4 +1,6 @@
-import React from "react";
+export const metadata = {
+  title: "Об Ассоциации",
+};
 
 const AboutPage = () => {
   return (

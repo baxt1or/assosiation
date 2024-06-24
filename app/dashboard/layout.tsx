@@ -1,5 +1,9 @@
 import { DashboardSidebar } from "@/components/Sidebar";
 
+export const metadata = {
+  title: "Dashboard",
+};
+
 const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <>

@@ -1,6 +1,9 @@
-import { NewsCard } from "@/components/NewsCard";
 import { NewsPaginationController } from "@/components/NewsPaginationController";
 import { getNews } from "@/db/queries";
+
+export const metadata = {
+  title: "Новости",
+};
 
 const NewsPage = async () => {
   const newsData = getNews();

@@ -49,7 +49,7 @@ export const NewsColumns: ColumnDef<News>[] = [
 export const MemberColums: ColumnDef<Member>[] = [
   {
     accessorKey: "title",
-    header: "Title",
+    header: "Заголовок",
   },
   {
     accessorKey: "email",

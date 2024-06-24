@@ -5,7 +5,7 @@ import { buttonVariants } from "./ui/button";
 
 export const About = () => {
   return (
-    <section className="flex flex-col gap-y-8 items-center justify-center h-full my-12">
+    <section className="flex flex-col gap-y-8 items-center justify-center py-32">
       <h1 className="text-2xl md:text-4xl font-bold text-center">
         Полная информация о работе ассоциации
       </h1>

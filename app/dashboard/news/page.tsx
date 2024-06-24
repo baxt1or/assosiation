@@ -8,8 +8,8 @@ import { getNews } from "@/db/queries";
 import { DataTable } from "@/components/DataTable";
 
 import { Textarea } from "@/components/ui/textarea";
-import { DialogForm } from "@/components/shared/dialog";
 import { NewsColumns } from "@/components/colums";
+import { DialogForm } from "@/components/Dialog";
 
 const NewsPage = async () => {
   const newsData = getNews();

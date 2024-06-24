@@ -8,7 +8,7 @@ import {
 } from "@/components/ui/hover-card";
 import { DropDownMenu } from "./DropDownmenu";
 
-const links = [
+export const links = [
   { title: "ГЛАВНАЯ", href: "/" },
   {
     title: "ОБ АССОЦИАЦИИ",

@@ -18,8 +18,9 @@ import { formSchema, Schema } from "@/lib/schema";
 import { useTransition } from "react";
 import { createRequest } from "@/actions/request";
 import { useRouter } from "next/navigation";
-import { Label } from "../ui/label";
+
 import { Loader2 } from "lucide-react";
+import { Label } from "./ui/label";
 
 export function FormRequest() {
   const [pending, setIsPending] = useTransition();
