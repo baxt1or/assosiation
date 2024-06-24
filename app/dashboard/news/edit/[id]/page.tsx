@@ -5,7 +5,7 @@ import { getNewsSingle } from "@/db/queries";
 import { redirect } from "next/navigation";
 import React from "react";
 
-const NewsIdPage = async ({ params }: { params: { id: string } }) => {
+const NewsIdPage = async ({ params }: { params: { id: number } }) => {
   const news = await getNewsSingle(params.id);
 
   if (!news) {
