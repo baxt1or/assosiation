@@ -26,7 +26,7 @@ export const DeleteButton = ({ id }: Props) => {
   return (
     <>
       {isLoading ? (
-        <Loader2 className="h-5 w-5 animate-spin bg-red-500" />
+        <Loader2 className="h-5 w-5 animate-spin text-red-500" />
       ) : (
         <Trash
           className="w-5 h-5 text-red-500"
@@ -55,7 +55,7 @@ export const DeletMember = ({ id }: Props) => {
   return (
     <>
       {isLoading ? (
-        <Loader2 className="h-5 w-5 animate-spin bg-red-500" />
+        <Loader2 className="h-5 w-5 animate-spin text-red-500" />
       ) : (
         <Trash
           className="w-5 h-5 text-red-500"
@@ -84,7 +84,7 @@ export const DeleteRequest = ({ id }: Props) => {
   return (
     <>
       {isLoading ? (
-        <Loader2 className="h-5 w-5 animate-spin bg-red-500" />
+        <Loader2 className="h-5 w-5 animate-spin text-red-500" />
       ) : (
         <Trash
           className="w-5 h-5 text-red-500"
