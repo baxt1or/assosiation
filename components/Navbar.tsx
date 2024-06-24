@@ -16,6 +16,7 @@ export const links = [
     submenu: [
       { title: "Об Ассоциации", href: "/about" },
       { title: "Руководство", href: "/director" },
+      { title: "Сотрудники", href: "/faculty" },
     ],
   },
   { title: "ЧЛЕНСТВО", href: "/membership" },

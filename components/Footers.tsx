@@ -46,7 +46,7 @@ export const Footers = () => {
           </div>
 
           <div className="hidden md:flex flex-col gap-y-2 items-center md:items-start">
-            <h1 className="text-lg font-bold">Navigation</h1>
+            <h1 className="text-lg font-bold">Навигация</h1>
             {links.map((link) => (
               <Link
                 key={link.href}
@@ -58,9 +58,9 @@ export const Footers = () => {
               </Link>
             ))}
           </div>
-          <div className="hidden md:flex flex-col gap-4 items-center md:items-start">
-            <p className="text-lg font-bold">Social Media</p>
-            <div className="flex items-center gap-2">
+          <div className="hidden md:flex flex-col gap-4 items-center">
+            <p className="text-lg font-bold">Социальные сети</p>
+            <div className="flex items-center gap-2 justify-center">
               <Instagram />
               <Facebook />
               <Twitter />
