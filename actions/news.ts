@@ -35,7 +35,7 @@ export const createNews = async (formData: FormData) => {
   return data;
 };
 
-export const deleteNews = async (id: number) => {
+export const deleteNews = async (id: string) => {
   const data = await db.news.delete({
     where: {
       id: id,
@@ -48,7 +48,7 @@ export const deleteNews = async (id: number) => {
   return data;
 };
 
-export const updateNews = async (id: number, formData: FormData) => {
+export const updateNews = async (id: string, formData: FormData) => {
   const title = formData.get("title") as string;
   const content = formData.get("content") as string;
 

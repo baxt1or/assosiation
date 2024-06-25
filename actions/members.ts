@@ -43,7 +43,7 @@ export const createMember = async (formData: FormData) => {
   return data;
 };
 
-export const deleteMember = async (id: number) => {
+export const deleteMember = async (id: string) => {
   const data = await db.member.delete({
     where: {
       id: id,
@@ -56,7 +56,7 @@ export const deleteMember = async (id: number) => {
   return data;
 };
 
-export const updateMember = async (id: number, formData: FormData) => {
+export const updateMember = async (id: string, formData: FormData) => {
   const title = formData.get("title") as string;
   const phone = formData.get("phone") as string;
   const webLink = formData.get("webLink") as string;

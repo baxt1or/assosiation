@@ -23,7 +23,7 @@ export const createStaffMember = async (formData: FormData) => {
   return data;
 };
 
-export const deleteStaffMember = async (id: number) => {
+export const deleteStaffMember = async (id: string) => {
   const data = await db.faculty.delete({
     where: {
       id: id,

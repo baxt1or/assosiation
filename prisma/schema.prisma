@@ -15,7 +15,7 @@ datasource db {
 }
 
 model Member {
-  id      Int  @id @default(autoincrement())
+  id       String  @id @default(uuid())
   imgSrc  String? @db.Text
   title   String
   webLink String?
@@ -28,7 +28,7 @@ model Member {
 }
 
 model News {
-  id       Int  @id @default(autoincrement())
+  id       String  @id @default(uuid())
   title    String
   content  String
   imgSrc   String @db.Text
@@ -38,7 +38,7 @@ model News {
 }
 
 model Request {
-  id          Int @id @default(autoincrement())
+  id         String  @id @default(uuid())
   fullName    String @db.Text
   position    String @db.Text
   email       String @db.Text
@@ -50,7 +50,7 @@ model Request {
 }
 
 model About {
-  id       Int @id @default(autoincrement())
+  id       String  @id @default(uuid())
   phoneOne String @db.Text
   phoneTwo String @db.Text
   email    String @db.Text
@@ -58,9 +58,12 @@ model About {
 }
 
 model Faculty {
-  id  Int @id @default(autoincrement())
-  name String
-  position String
+  id          String  @id @default(uuid())
+  name        String
+  position    String
   companyName String
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt()
 }
 

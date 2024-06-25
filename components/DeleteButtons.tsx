@@ -8,7 +8,7 @@ import { Loader2, Trash } from "lucide-react";
 import { useState } from "react";
 
 type Props = {
-  id: number;
+  id: string;
 };
 
 export const DeleteButton = ({ id }: Props) => {

@@ -26,7 +26,7 @@ export const NewsColumns: ColumnDef<News>[] = [
     accessorKey: "id",
     header: "ID",
     cell: ({ row }) => {
-      const data_id = row.getValue("id") as number;
+      const data_id = row.getValue("id") as string;
       return <p className="">{data_id}</p>;
     },
   },
@@ -47,7 +47,7 @@ export const NewsColumns: ColumnDef<News>[] = [
     accessorKey: "id",
     header: "Удалить",
     cell: ({ row }) => {
-      const data_id = row.getValue("id") as number;
+      const data_id = row.getValue("id") as string;
       return (
         <div className="flex gap-2">
           <Link href={`/dashboard/news/edit/${data_id}`}>
@@ -85,7 +85,7 @@ export const MemberColums: ColumnDef<Member>[] = [
     accessorKey: "id",
     header: "ID",
     cell: ({ row }) => {
-      const data_id = row.getValue("id") as number;
+      const data_id = row.getValue("id") as string;
       return <p className="hidden">{data_id}</p>;
     },
   },
@@ -106,7 +106,7 @@ export const MemberColums: ColumnDef<Member>[] = [
     accessorKey: "id",
     header: "Удалить",
     cell: ({ row }) => {
-      const data_id = row.getValue("id") as number;
+      const data_id = row.getValue("id") as string;
       return (
         <div className="flex gap-2">
           <Link href={`/dashboard/members/edit/${data_id}`}>
@@ -165,7 +165,7 @@ export const RequestColumns: ColumnDef<Request>[] = [
     accessorKey: "id",
     header: "Удалить",
     cell: ({ row }) => {
-      const data_id = row.getValue("id") as number;
+      const data_id = row.getValue("id") as string;
       return <DeleteRequest id={data_id} />;
     },
   },
@@ -184,7 +184,7 @@ export const StaffMembers: ColumnDef<Faculty>[] = [
     accessorKey: "id",
     header: "ID",
     cell: ({ row }) => {
-      const data_id = row.getValue("id") as number;
+      const data_id = row.getValue("id") as string;
       return data_id;
     },
   },
@@ -198,7 +198,7 @@ export const StaffMembers: ColumnDef<Faculty>[] = [
     accessorKey: "id",
     header: "Удалить",
     cell: ({ row }) => {
-      const data_id = row.getValue("id") as number;
+      const data_id = row.getValue("id") as string;
       return (
         <div className="flex gap-2">
           <Link href={`/dashboard/news/edit/${data_id}`}>
@@ -232,7 +232,7 @@ export const AboutDataColums: ColumnDef<About>[] = [
     accessorKey: "id",
     header: "ID",
     cell: ({ row }) => {
-      const data_id = row.getValue("id") as number;
+      const data_id = row.getValue("id") as string;
       return data_id;
     },
   },
@@ -242,7 +242,7 @@ export const AboutDataColums: ColumnDef<About>[] = [
     accessorKey: "id",
     header: "Удалить",
     cell: ({ row }) => {
-      const data_id = row.getValue("id") as number;
+      const data_id = row.getValue("id") as string;
       return (
         <div className="flex gap-2">
           <Link href={`/dashboard/news/edit/${data_id}`}>

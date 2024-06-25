@@ -5,7 +5,7 @@ import { getMember } from "@/db/queries";
 import Image from "next/image";
 import React from "react";
 
-const MemberIdPage = async ({ params }: { params: { id: number } }) => {
+const MemberIdPage = async ({ params }: { params: { id: string } }) => {
   const member = await getMember(params.id);
   if (!member) {
     return;

@@ -24,7 +24,7 @@ export const createAboutData = async (formData: FormData) => {
   return data;
 };
 
-export const deleteAboutData = async (id: number) => {
+export const deleteAboutData = async (id: string) => {
   const data = await db.about.delete({
     where: {
       id: id,

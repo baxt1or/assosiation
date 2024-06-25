@@ -21,7 +21,7 @@ export const getNews = cache(async () => {
   return data;
 });
 
-export const getNewsSingle = cache(async (id: number) => {
+export const getNewsSingle = cache(async (id: string) => {
   const data = await db.news.findUnique({
     where: {
       id: id,
@@ -41,7 +41,7 @@ export const getRequests = cache(async () => {
   return data;
 });
 
-export const getMember = cache(async (id: number) => {
+export const getMember = cache(async (id: string) => {
   const data = await db.member.findUnique({
     where: {
       id: id,

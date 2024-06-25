@@ -4,7 +4,7 @@ import Image from "next/image";
 import { redirect } from "next/navigation";
 import React from "react";
 
-const NewsIdPage = async ({ params }: { params: { id: number } }) => {
+const NewsIdPage = async ({ params }: { params: { id: string } }) => {
   const news = await getNewsSingle(params.id);
   if (!news) {
     redirect("/");

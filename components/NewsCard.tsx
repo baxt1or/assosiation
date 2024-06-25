@@ -5,7 +5,7 @@ import { cn, formatDateOnly } from "@/lib/utils";
 import { buttonVariants } from "./ui/button";
 
 type Props = {
-  id: number;
+  id: string;
   title: string;
   imgSrc: string;
   createdAt: Date;
@@ -35,7 +35,7 @@ export const NewsCard = ({ id, title, imgSrc, createdAt }: Props) => {
             </p>
 
             <Link
-              href={`/news/${id.toString()}`} // Ensure `id` is passed directly without converting it to a string
+              href={`/news/${id}`}
               className={cn(
                 buttonVariants({ variant: "outline", size: "sm" }),
                 "text-gray-500 text-xs"
