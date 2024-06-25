@@ -22,18 +22,13 @@ export const getNews = cache(async () => {
 });
 
 export const getNewsSingle = cache(async (id: number) => {
-  try {
-    const data = await db.news.findUnique({
-      where: {
-        id: id,
-      },
-    });
+  const data = await db.news.findUnique({
+    where: {
+      id: id,
+    },
+  });
 
-    return data; // Return the fetched data
-  } catch (error) {
-    console.error(`Error fetching news item with id ${id}:`, error);
-    throw new Error(`Failed to fetch news item with id ${id}`);
-  }
+  return data;
 });
 
 export const getRequests = cache(async () => {
@@ -58,5 +53,10 @@ export const getMember = cache(async (id: number) => {
 
 export const getStaffMembers = cache(async () => {
   const data = await db.faculty.findMany({});
+  return data;
+});
+
+export const getAboutsData = cache(async () => {
+  const data = await db.about.findMany({});
   return data;
 });

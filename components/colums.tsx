@@ -1,12 +1,13 @@
 "use client";
 
 import { formatDate } from "@/lib/utils";
-import { Faculty, Member, News, Request } from "@prisma/client";
+import { About, Faculty, Member, News, Request } from "@prisma/client";
 import { ColumnDef } from "@tanstack/react-table";
 import Link from "next/link";
 import { PenBox } from "lucide-react";
 import {
   DeletMember,
+  DeleteAboutData,
   DeleteButton,
   DeleteRequest,
   DeleteStaffMember,
@@ -15,7 +16,7 @@ import {
 export const NewsColumns: ColumnDef<News>[] = [
   {
     accessorKey: "title",
-    header: "Заголовок",
+    header: "Названия",
     cell: ({ row }) => {
       const data_title = row.getValue("title") as string;
       return <p className="text-xs text-black font-normal">{data_title}</p>;
@@ -62,7 +63,7 @@ export const NewsColumns: ColumnDef<News>[] = [
 export const MemberColums: ColumnDef<Member>[] = [
   {
     accessorKey: "title",
-    header: "Заголовок",
+    header: "Компания",
   },
   {
     accessorKey: "email",
@@ -173,11 +174,11 @@ export const RequestColumns: ColumnDef<Request>[] = [
 export const StaffMembers: ColumnDef<Faculty>[] = [
   {
     accessorKey: "name",
-    header: "Name",
+    header: "Ф.И.О",
   },
   {
     accessorKey: "position",
-    header: "Position",
+    header: "Должность",
   },
   {
     accessorKey: "id",
@@ -189,11 +190,7 @@ export const StaffMembers: ColumnDef<Faculty>[] = [
   },
   {
     accessorKey: "companyName",
-    header: "Company",
-  },
-  {
-    accessorKey: "id",
-    header: "ID",
+    header: "Компания",
   },
   {
     id: "actions",
@@ -208,6 +205,50 @@ export const StaffMembers: ColumnDef<Faculty>[] = [
             <PenBox className="w-5 h-5 text-green-500" />
           </Link>
           <DeleteStaffMember id={data_id} />
+        </div>
+      );
+    },
+  },
+];
+
+export const AboutDataColums: ColumnDef<About>[] = [
+  {
+    accessorKey: "phoneOne",
+    header: "Номер 1",
+  },
+  {
+    accessorKey: "phoneTwo",
+    header: "Номер 2",
+  },
+  {
+    accessorKey: "email",
+    header: "Email",
+  },
+  {
+    accessorKey: "address",
+    header: "Адрес",
+  },
+  {
+    accessorKey: "id",
+    header: "ID",
+    cell: ({ row }) => {
+      const data_id = row.getValue("id") as number;
+      return data_id;
+    },
+  },
+  {
+    id: "actions",
+    enableHiding: false,
+    accessorKey: "id",
+    header: "Удалить",
+    cell: ({ row }) => {
+      const data_id = row.getValue("id") as number;
+      return (
+        <div className="flex gap-2">
+          <Link href={`/dashboard/news/edit/${data_id}`}>
+            <PenBox className="w-5 h-5 text-green-500" />
+          </Link>
+          <DeleteAboutData id={data_id} />
         </div>
       );
     },

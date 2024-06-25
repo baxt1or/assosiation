@@ -1,48 +1,43 @@
 import Image from "next/image";
 import Link from "next/link";
 import { links } from "./Navbar";
-import { data } from "@/app/(main)/contacts/page";
-import {
-  Facebook,
-  Instagram,
-  Mail,
-  MapPin,
-  Phone,
-  Twitter,
-} from "lucide-react";
+import { Facebook, Instagram, Twitter } from "lucide-react";
+import { AboutData } from "./AboutData";
+
+const navigations = [
+  { title: "Об Ассоциации", href: "/about" },
+  { title: "Руководство", href: "/director" },
+  { title: "Рабочая Группа", href: "/faculty" },
+];
 
 export const Footers = () => {
   return (
     <footer className="text-white bg-[#001561] pt-8">
-      <div className="max-w-6xl mx-auto px-4 md:px-8 bg-[#001561]">
+      <div className="max-w-7xl mx-auto px-4 md:px-8 bg-[#001561]">
         <div className="flex flex-col md:flex-row justify-between items-start gap-8">
           <div className="flex flex-col gap-y-6">
             <div className="flex items-center gap-2">
               <Image src="/logo.png" alt="logo" width={54} height={54} />
-              <p className="text-sm max-w-xs text-center md:text-left">
+              <p className="text-xs max-w-xs text-center md:text-left">
                 Ассоциация представительств иностранных фармацевтических
                 компаний и производителей в Республике Узбекистан
               </p>
             </div>
 
-            <div className="space-y-4">
-              <div className="flex flex-col gap-y-2 items-center md:items-start">
-                {data.numbers.map((number) => (
-                  <p className="flex items-center gap-2 text-sm" key={number}>
-                    <Phone className="h-4 w-4" aria-label="Phone icon" />
-                    {number}
-                  </p>
-                ))}
-                <h1 className="flex items-center gap-2 text-sm font-semibold ">
-                  <Mail className="w-4 h-4" aria-label="Mail icon" />
-                  {data.email}
-                </h1>
-                <h1 className="flex items-center gap-2 text-sm font-semibold ">
-                  <MapPin className="w-5 h-5" aria-label="Map pin icon" />
-                  {data.address}
-                </h1>
-              </div>
-            </div>
+            <AboutData />
+          </div>
+
+          <div className="hidden md:flex flex-col gap-y-2 items-center md:items-start">
+            <h1 className="text-lg font-bold">О нас</h1>
+            {navigations.map((navigation) => (
+              <Link
+                href={navigation.href}
+                key={navigation.href}
+                className="text-xs font-medium text-white hover:underline"
+              >
+                {navigation.title}
+              </Link>
+            ))}
           </div>
 
           <div className="hidden md:flex flex-col gap-y-2 items-center md:items-start">
@@ -58,6 +53,7 @@ export const Footers = () => {
               </Link>
             ))}
           </div>
+
           <div className="hidden md:flex flex-col gap-4 items-center">
             <p className="text-lg font-bold">Социальные сети</p>
             <div className="flex items-center gap-2 justify-center">
@@ -68,6 +64,7 @@ export const Footers = () => {
           </div>
         </div>
       </div>
+
       <div className="mt-4 bg-blue-500 ">
         <div className="max-w-6xl mx-auto">
           <div className="flex gap-4 items-center md:items-start">

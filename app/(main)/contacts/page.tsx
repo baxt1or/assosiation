@@ -1,4 +1,5 @@
-import { Mail, MapPin, Phone } from "lucide-react";
+import { AboutData } from "@/components/AboutData";
+import { Phone } from "lucide-react";
 
 export const metadata = {
   title: "Контакты",
@@ -17,15 +18,9 @@ const contacts = [
   },
 ];
 
-export const data = {
-  numbers: ["+998 71 232 20 49", "+998 90 0474756"],
-  email: "pharm.association@mail.ru",
-  address: "ул. Амира Темура, 95 А",
-};
-
-const ContactsPage = () => {
+const ContactsPage = async () => {
   return (
-    <section className="mt-28 px-12 py-16 max-w-7xl mx-auto">
+    <section className="mt-28 px-12 pb-16 max-w-7xl mx-auto">
       <h1 className="text-4xl font-bold text-[#001561] text-center md:text-start">
         Контакты
       </h1>
@@ -48,24 +43,7 @@ const ContactsPage = () => {
           ))}
         </div>
 
-        <div className="space-y-8">
-          <div className="flex flex-col gap-y-6">
-            {data.numbers.map((number) => (
-              <p className="flex items-center gap-2 text-sm" key={number}>
-                <Phone className="h-4 w-4" aria-label="Phone icon" />
-                {number}
-              </p>
-            ))}
-            <h1 className="flex items-center gap-2 text-sm font-semibold text-black">
-              <Mail className="w-4 h-4" aria-label="Mail icon" />
-              {data.email}
-            </h1>
-            <h1 className="flex items-center gap-2 text-sm font-semibold text-black">
-              <MapPin className="w-5 h-5" aria-label="Map pin icon" />
-              {data.address}
-            </h1>
-          </div>
-        </div>
+        <AboutData />
       </div>
     </section>
   );

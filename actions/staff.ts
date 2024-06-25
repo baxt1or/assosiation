@@ -18,7 +18,7 @@ export const createStaffMember = async (formData: FormData) => {
 
   revalidatePath("/dashboard/staff");
   revalidatePath("/");
-  revalidatePath("/faculy");
+  revalidatePath("/faculty");
 
   return data;
 };
@@ -32,6 +32,6 @@ export const deleteStaffMember = async (id: number) => {
 
   revalidatePath("/dashboard/staff");
   revalidatePath("/");
-  revalidatePath("/faculy");
+  revalidatePath("/faculty");
   return data;
 };

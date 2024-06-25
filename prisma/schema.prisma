@@ -63,3 +63,4 @@ model Faculty {
   position String
   companyName String
 }
+

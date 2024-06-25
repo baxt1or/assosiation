@@ -6,7 +6,7 @@ export const metadata = {
 
 const Membership = () => {
   return (
-    <section className="my-28 p-12 max-w-7xl mx-auto flex flex-col ">
+    <section className="mt-28 px-12 pb-12 max-w-7xl mx-auto flex flex-col ">
       <h1 className="text-2xl md:text-4xl font-semibold text-[#001561]">
         УСЛОВИЯ ПО ВСТУПЛЕНИЮ В РЯДЫ АССОЦИАЦИИ
       </h1>

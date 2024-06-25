@@ -17,11 +17,6 @@ export const createNews = async (formData: FormData) => {
       contentType: "image/png",
     });
 
-  // const { data: fileData } = await supabase.storage.from("images").upload(`${fileSrc.name}-${new Date}`, fileSrc, {
-  //     cacheControl: "2592000",
-  //     contentType: "image/png"
-  // })
-
   if (!imgData) {
     return null;
   }

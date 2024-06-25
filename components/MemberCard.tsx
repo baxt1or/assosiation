@@ -34,7 +34,7 @@ export const MemberCard = ({
           height={100}
           className="w-full h-[100px] object-contain"
         />
-        <h1 className="text-center font-semibold text-[#001561] text-sm">
+        <h1 className="text-center font-semibold text-[#001561] text-sm h-6 ">
           {title}
         </h1>
       </div>

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { cn, formatDate } from "@/lib/utils";
+import { cn, formatDateOnly } from "@/lib/utils";
 import { buttonVariants } from "./ui/button";
 
 type Props = {
@@ -31,7 +31,7 @@ export const NewsCard = ({ id, title, imgSrc, createdAt }: Props) => {
 
           <div className="flex items-center justify-between">
             <p className="text-xs text-muted-foreground">
-              {formatDate(createdAt)}
+              {formatDateOnly(createdAt)}
             </p>
 
             <Link

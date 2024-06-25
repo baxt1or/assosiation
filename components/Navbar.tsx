@@ -9,20 +9,20 @@ import {
 import { DropDownMenu } from "./DropDownmenu";
 
 export const links = [
-  { title: "ГЛАВНАЯ", href: "/" },
+  { title: "Главная", href: "/" },
   {
-    title: "ОБ АССОЦИАЦИИ",
+    title: "Об ассоциации",
     href: "/about",
     submenu: [
-      { title: "Об Ассоциации", href: "/about" },
+      { title: "Об ассоциации", href: "/about" },
       { title: "Руководство", href: "/director" },
-      { title: "Сотрудники", href: "/faculty" },
+      { title: "Рабочая группа", href: "/faculty" },
     ],
   },
-  { title: "ЧЛЕНСТВО", href: "/membership" },
-  { title: "НОВОСТИ", href: "/news" },
-  { title: "ЗАКОНОДАТЕЛЬСТВО", href: "/law" },
-  { title: "КОНТАКТЫ", href: "/contacts" },
+  { title: "Членство", href: "/membership" },
+  { title: "Новости", href: "/news" },
+  { title: "Законодательство", href: "/law" },
+  { title: "Контакты", href: "/contacts" },
 ];
 
 const NavigationLinks = () => (
@@ -30,7 +30,7 @@ const NavigationLinks = () => (
     {links.map((link) =>
       link.submenu ? (
         <HoverCard key={link.title}>
-          <HoverCardTrigger className="text-bold text-white hover:opacity-50">
+          <HoverCardTrigger className="text-bold text-white hover:opacity-50 uppercase">
             {link.title}
           </HoverCardTrigger>
           <HoverCardContent className="flex flex-col w-auto gap-y-2 text-muted-foreground px-8 py-4 text-start rounded-sm">
@@ -38,7 +38,7 @@ const NavigationLinks = () => (
               <Link
                 key={sublink.title}
                 href={sublink.href}
-                className="hover:text-black"
+                className="hover:text-black "
               >
                 {sublink.title}
               </Link>
@@ -49,7 +49,7 @@ const NavigationLinks = () => (
         <Link
           key={link.title}
           href={link.href}
-          className="text-bold text-white hover:opacity-50"
+          className="text-bold text-white hover:opacity-50 uppercase"
         >
           {link.title}
         </Link>
