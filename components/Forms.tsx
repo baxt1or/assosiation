@@ -27,6 +27,7 @@ import { createMember } from "@/actions/members";
 import { createAboutData } from "@/actions/about";
 import { useState } from "react";
 import Image from "next/image";
+import { createAds } from "@/actions/ads";
 
 export const StaffForm = () => {
   const [position, setPosition] = useState("");
@@ -360,6 +361,43 @@ export const AboutDataForm = () => {
           type="text"
           name="address"
           placeholder="Адрес"
+          className="p-4 w-full rounded-3xl"
+        />
+
+        <Button type="submit" className="w-full font-bold text-lg">
+          Сохранять
+        </Button>
+      </form>
+    </DialogForm>
+  );
+};
+
+export const AdsForm = () => {
+  const [imgSrc, setImgSrc] = useState<string | null>(null);
+
+  const handleImageChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files?.[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setImgSrc(reader.result as string);
+      };
+      reader.readAsDataURL(file);
+    }
+  };
+
+  return (
+    <DialogForm label="Добавить">
+      <form
+        action={createAds}
+        className="w-full flex flex-col items-center gap-y-6"
+      >
+        <h1 className="text-center font-bold text-3xl mb-2">Добавить</h1>
+
+        <input type="file" name="imgSrc" />
+        <Textarea
+          name="content"
+          placeholder="Content"
           className="p-4 w-full rounded-3xl"
         />
 

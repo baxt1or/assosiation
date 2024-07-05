@@ -19,7 +19,14 @@ export const links = [
       { title: "Рабочая группа", href: "/faculty" },
     ],
   },
-  { title: "Членство", href: "/membership" },
+  {
+    title: "Членство",
+    href: "/membership",
+    submenu: [
+      { title: "Членство", href: "/membership" },
+      { title: "Компании", href: "/members" },
+    ],
+  },
   { title: "Новости", href: "/news" },
   { title: "Законодательство", href: "/law" },
   { title: "Контакты", href: "/contacts" },

@@ -8,6 +8,7 @@ const navigations = [
   { title: "Об Ассоциации", href: "/about" },
   { title: "Руководство", href: "/director" },
   { title: "Рабочая Группа", href: "/faculty" },
+  { title: "Компании", href: "/members" },
 ];
 
 export const Footers = () => {
@@ -65,30 +66,15 @@ export const Footers = () => {
         </div>
       </div>
 
-      <div className="mt-4 bg-blue-500 ">
-        <div className="max-w-6xl mx-auto">
-          <div className="flex gap-4 items-center md:items-start">
-            <p className="text-center md:text-left text-sm">
-              &copy; {new Date().getFullYear()} Baxtiyor Bekmurodov. All rights
-              reserved.
-            </p>
-            <div className="flex gap-4">
-              <Link
-                href="/privacy"
-                className="hover:underline text-sm"
-                aria-label="Privacy Policy"
-              >
-                Privacy Policy
-              </Link>
-              <Link
-                href="/terms"
-                className="hover:underline text-sm"
-                aria-label="Terms of Service"
-              >
-                Terms of Service
-              </Link>
-            </div>
-          </div>
+      <div className="border-t py-3 mt-4 max-w-7xl mx-auto px-8 border-gray-50">
+        <div className="flex items-center justify-between">
+          <p className="text-center md:text-left text-sm">
+            &copy; {new Date().getFullYear()} Все права защищены
+          </p>
+          <p className="text-sm font-normal">
+            Разработано{" "}
+            <span className="text-gray-300">Baxtiyor Bekmurodov</span>
+          </p>
         </div>
       </div>
     </footer>

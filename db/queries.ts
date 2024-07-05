@@ -1,5 +1,6 @@
 import { cache } from "react";
 import db from "./db";
+import { assert } from "console";
 
 export const getMembers = cache(async () => {
   const data = await db.member.findMany({
@@ -58,5 +59,10 @@ export const getStaffMembers = cache(async () => {
 
 export const getAboutsData = cache(async () => {
   const data = await db.about.findMany({});
+  return data;
+});
+
+export const getAds = cache(async () => {
+  const data = await db.ads.findMany();
   return data;
 });

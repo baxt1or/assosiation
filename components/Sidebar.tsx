@@ -1,7 +1,15 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import { File, Home, InfoIcon, Newspaper, User, icons } from "lucide-react";
+import {
+  BookMarked,
+  File,
+  Home,
+  InfoIcon,
+  Newspaper,
+  User,
+  icons,
+} from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
@@ -31,6 +39,11 @@ const links = [
     label: "О нас",
     href: "/dashboard/about",
     icon: <InfoIcon />,
+  },
+  {
+    label: "Ads",
+    href: "/dashboard/ads",
+    icon: <BookMarked />,
   },
 ];
 

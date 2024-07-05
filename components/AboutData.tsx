@@ -14,7 +14,7 @@ export const AboutData = async () => {
           </p>
           <p className="flex items-center gap-2 text-sm" key={item.id}>
             <Phone className="h-4 w-4" aria-label="Phone icon" />
-            {item.phoneOne}
+            {item.phoneTwo}
           </p>
           <h1 className="flex items-center gap-2 text-sm font-semibold ">
             <Mail className="w-4 h-4" aria-label="Mail icon" />

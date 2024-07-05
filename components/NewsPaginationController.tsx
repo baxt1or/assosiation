@@ -21,6 +21,7 @@ export const NewsPaginationController = ({ data }: { data: News[] }) => {
             imgSrc={post.imgSrc!}
             title={post.title}
             createdAt={post.createdAt}
+            content={post.content}
           />
         ))}
       </div>
