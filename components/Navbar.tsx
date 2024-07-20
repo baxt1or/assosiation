@@ -7,6 +7,7 @@ import {
   HoverCardTrigger,
 } from "@/components/ui/hover-card";
 import { DropDownMenu } from "./DropDownmenu";
+import { ChevronDown } from "lucide-react";
 
 export const links = [
   { title: "Главная", href: "/" },
@@ -28,7 +29,10 @@ export const links = [
     ],
   },
   { title: "Новости", href: "/news" },
-  { title: "Законодательство", href: "/law" },
+  {
+    title: "Законодательство",
+    href: "/legislation",
+  },
   { title: "Контакты", href: "/contacts" },
 ];
 
@@ -37,8 +41,9 @@ const NavigationLinks = () => (
     {links.map((link) =>
       link.submenu ? (
         <HoverCard key={link.title}>
-          <HoverCardTrigger className="text-bold text-white hover:opacity-50 uppercase">
-            {link.title}
+          <HoverCardTrigger className="flex items-center gap-1 text-white text-bold  hover:opacity-50 uppercase cursor-pointer">
+            <p>{link.title}</p>
+            <ChevronDown className="h-5 w-5" />
           </HoverCardTrigger>
           <HoverCardContent className="flex flex-col w-auto gap-y-2 text-muted-foreground px-8 py-4 text-start rounded-sm">
             {link.submenu.map((sublink) => (

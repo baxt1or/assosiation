@@ -76,3 +76,15 @@ model Ads {
   updatedAt DateTime @updatedAt()
 }
 
+
+
+
+model Documents {
+  id String @id @default(uuid())
+  title String @db.Text
+  content String @db.Text
+  category String @db.Text
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}

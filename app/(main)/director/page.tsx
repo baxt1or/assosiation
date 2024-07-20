@@ -8,12 +8,12 @@ export const metadata = {
 const persons = [
   {
     name: "Аскарова Мухаббат Акбаровна",
-    photo: "/director.jpg",
+    photo: "/images/director.jpg",
     position: "Директор",
   },
   {
     name: "Литвиненко Наталья Генадьевна",
-    photo: "/ispol.jpg",
+    photo: "/images/ispol.jpg",
     position: "Исполнительный директор  ",
   },
 ];

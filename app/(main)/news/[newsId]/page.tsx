@@ -1,11 +1,10 @@
-import { getNewsSingle } from "@/db/queries";
-
 import Image from "next/image";
 import { redirect } from "next/navigation";
-import React from "react";
+import parse from "html-react-parser";
+import { getSingleNews } from "@/lib/queries";
 
-const NewsIdPage = async ({ params }: { params: { id: string } }) => {
-  const news = await getNewsSingle(params.id);
+const NewsIdPage = async ({ params }: { params: { newsId: string } }) => {
+  const news = await getSingleNews(params.newsId);
   if (!news) {
     redirect("/");
   }
@@ -27,7 +26,7 @@ const NewsIdPage = async ({ params }: { params: { id: string } }) => {
           </div>
 
           <p className="text-sm font-normal text-black text-center">
-            {news.content}{" "}
+            {parse(news.content)}
           </p>
         </div>
       </div>

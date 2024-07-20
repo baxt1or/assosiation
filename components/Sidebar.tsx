@@ -4,17 +4,17 @@ import { cn } from "@/lib/utils";
 import {
   BookMarked,
   File,
+  FileDownIcon,
   Home,
   InfoIcon,
   Newspaper,
   User,
-  icons,
 } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
 
-const links = [
+export const links = [
   {
     label: "Компании",
     href: "/dashboard/members",
@@ -41,9 +41,14 @@ const links = [
     icon: <InfoIcon />,
   },
   {
-    label: "Ads",
+    label: "Reklama",
     href: "/dashboard/ads",
     icon: <BookMarked />,
+  },
+  {
+    label: "Закон",
+    href: "/dashboard/legislation",
+    icon: <FileDownIcon />,
   },
 ];
 

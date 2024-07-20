@@ -24,11 +24,6 @@ export const Ads = ({
             />
           </div>
         </div>
-        <div className="space-y-2 px-4">
-          <div className="flex items-center justify-between">
-            <p className="text-xs text-muted-foreground">{content}</p>
-          </div>
-        </div>
       </div>
     </div>
   );

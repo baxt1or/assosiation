@@ -22,10 +22,10 @@ export const getNews = cache(async () => {
   return data;
 });
 
-export const getNewsSingle = cache(async (id: string) => {
+export const getNewsSingle = cache(async (newsId: string) => {
   const data = await db.news.findUnique({
     where: {
-      id: id,
+      id: newsId,
     },
   });
 

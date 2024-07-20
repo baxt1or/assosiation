@@ -3,8 +3,7 @@ import Link from "next/link";
 
 import { cn, formatDateOnly } from "@/lib/utils";
 import { buttonVariants } from "./ui/button";
-
-export const dynamic = "force-dynamic";
+import parse from "html-react-parser";
 
 type Props = {
   id: string;
@@ -33,9 +32,9 @@ export const NewsCard = ({ id, title, imgSrc, createdAt, content }: Props) => {
             {title}
           </h1>
 
-          <p className="text-xs line-clamp-2 text-muted-foreground">
-            {content}
-          </p>
+          <div className="text-xs line-clamp-2 text-muted-foreground">
+            {parse(content)}
+          </div>
 
           <div className="flex items-center justify-between">
             <p className="text-xs text-muted-foreground">

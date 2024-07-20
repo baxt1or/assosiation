@@ -373,19 +373,6 @@ export const AboutDataForm = () => {
 };
 
 export const AdsForm = () => {
-  const [imgSrc, setImgSrc] = useState<string | null>(null);
-
-  const handleImageChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const file = event.target.files?.[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.onloadend = () => {
-        setImgSrc(reader.result as string);
-      };
-      reader.readAsDataURL(file);
-    }
-  };
-
   return (
     <DialogForm label="Добавить">
       <form

@@ -4,27 +4,27 @@ import React from "react";
 const CLIENTS = [
   {
     alt: "/",
-    logo: "/bayer.svg",
+    logo: "/logos/bayer.svg",
   },
   {
     alt: "/",
-    logo: "/GR.svg",
+    logo: "/logos/GR.svg",
   },
   {
     alt: "/",
-    logo: "/BX.webp",
+    logo: "/logos/BX.webp",
   },
   {
     alt: "/",
-    logo: "/YPH.svg",
+    logo: "/logos/YPH.svg",
   },
   {
     alt: "/",
-    logo: "/nv.svg",
+    logo: "/logos/nv.svg",
   },
   {
     alt: "/",
-    logo: "/reddis.svg",
+    logo: "/logos/reddis.svg",
   },
 ];
 
@@ -59,9 +59,9 @@ export const Companies = () => {
   before:absolute
 "
       >
-        {[...Array(2)].map((arr) => (
+        {[...Array(2)].map((arr, index) => (
           <div
-            key={arr}
+            key={index}
             className="flex
         flex-nowrap
         animate-slide

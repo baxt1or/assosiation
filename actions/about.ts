@@ -20,7 +20,6 @@ export const createAboutData = async (formData: FormData) => {
 
   revalidatePath("/dashboard/about");
   revalidatePath("/contacts");
-
   return data;
 };
 

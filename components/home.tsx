@@ -6,7 +6,7 @@ import { FormRequest } from "./Forms";
 
 export const Home = () => {
   return (
-    <section className="w-full h-screen relative">
+    <section className="w-full h-screen relative min-h-screen">
       <video
         src="/dos.mp4"
         className="w-full h-full object-cover"
@@ -25,7 +25,7 @@ export const Home = () => {
             Ассоциация представительств иностранных фармацевтических компаний и
             производителей в Республике Узбекистан
           </h1>
-          <div className="flex items-center justify-center gap-4">
+          <div className="flex items-center justify-center gap-4 ml-3 md:ml-0">
             <Link
               href="/news"
               className={cn(
