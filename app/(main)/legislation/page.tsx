@@ -1,17 +1,15 @@
 import { LegislationPaginationController } from "@/components/legislation/LegislationPagination";
-
-import { getDocuments } from "@/lib/queries";
+import { getDocums } from "@/db/queries";
 
 const LegistaionPage = async () => {
-  const documents = getDocuments();
-  const [data] = await Promise.all([documents]);
+  const data = await getDocums();
+
   return (
-    <section className="w-full pb-6 h-screen min-h-screen">
-      <div className="max-w-7xl mx-auto flex flex-col gap-y-8 p-2">
-        <h1 className="text-4xl font-semibold text-black mt-12 pl-32">
+    <section className="h-screen min-h-screen mt-24 p-2">
+      <div className=" flex flex-col gap-y-8">
+        <h1 className="text-2xl text-center md:text-4xl font-semibold text-black mt-12 ">
           Законодательство Республики Узбекистан
         </h1>
-
         <LegislationPaginationController data={data} />
       </div>
     </section>

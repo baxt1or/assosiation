@@ -11,13 +11,17 @@ export const LegislationCard = ({ document }: Props) => {
     return <p>No result</p>;
   }
   return (
-    <div className="max-w-5xl mx-auto p-2">
+    <div className="md:max-w-7xl mx-auto p-4">
       <div className="flex flex-col gap-y-4">
-        <h1 className="text-lg  text-[#001561] font-bold">{document.title}</h1>
-        <div className="text-md text-black font-normal truncate h-24">
-          {parse(document.content)}
+        <h1 className="text-sm md:text-xl text-center text-[#001561] font-bold">
+          {document.title}
+        </h1>
+
+        <div className="text-sm md:text-md text-black font-normal text-center max-h-24 overflow-hidden">
+          {document.content}
         </div>
-        <div className="flex items-center justify-between">
+
+        <div className="flex items-center justify-between gap-y-2 ">
           <p className="text-sm text-muted-foreground font-normal">
             {formatDateOnly(document.createdAt)}
           </p>

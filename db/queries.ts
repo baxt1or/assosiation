@@ -66,3 +66,17 @@ export const getAds = cache(async () => {
   const data = await db.ads.findMany();
   return data;
 });
+
+export const getDocums = cache(async () => {
+  const data = await db.document.findMany();
+  return data;
+});
+
+export const getDocum = cache(async (documentId: string) => {
+  const data = await db.document.findUnique({
+    where: {
+      id: documentId,
+    },
+  });
+  return data;
+});

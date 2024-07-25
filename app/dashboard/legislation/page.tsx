@@ -1,10 +1,10 @@
-import { DocumentColumns } from "@/components/colums";
-import { DataTable } from "@/components/DataTable";
-import { getDocuments } from "@/lib/queries";
+import { DocumentColumns } from "@/components/data-table/columns";
+import { DataTable } from "@/components/data-table/DataTable";
+import { getDocums } from "@/db/queries";
 import Link from "next/link";
 
 const LegislationDashboardPage = async () => {
-  const data = await getDocuments();
+  const data = await getDocums();
   return (
     <div className="max-w-6xl mx-auto mt-24">
       <h1 className="text-4xl font-bold text-black">Компании</h1>

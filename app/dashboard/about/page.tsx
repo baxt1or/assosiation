@@ -1,7 +1,8 @@
 import { getAboutsData } from "@/db/queries";
-import { DataTable } from "@/components/DataTable";
-import { AboutDataColums } from "@/components/colums";
-import { AboutDataForm } from "@/components/Forms";
+
+import { AboutDataForm } from "@/components/about/AboutDataForm";
+import { DataTable } from "@/components/data-table/DataTable";
+import { AboutDataColums } from "@/components/data-table/columns";
 
 const AboutDataPage = async () => {
   const aboutData = getAboutsData();

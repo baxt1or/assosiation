@@ -1,8 +1,9 @@
 import { Companies } from "./companies";
 import { About } from "./About";
-import { MembersList } from "./MembersList";
-import { NewsSection } from "./NewsSection";
+
 import { Home } from "./home";
+import { MembersList } from "./member/MemberList";
+import { NewsSection } from "./news/NewsSection";
 
 const Wraper = () => {
   return (

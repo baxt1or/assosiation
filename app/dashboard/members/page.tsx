@@ -1,9 +1,10 @@
 import React from "react";
 
 import { getMembers } from "@/db/queries";
-import { DataTable } from "@/components/DataTable";
-import { MemberColums } from "@/components/colums";
-import { MemberForm } from "@/components/Forms";
+
+import { MemberForm } from "@/components/member/MemberForm";
+import { DataTable } from "@/components/data-table/DataTable";
+import { MemberColums } from "@/components/data-table/columns";
 
 const NewsDashboard = async () => {
   const data = await getMembers();

@@ -1,8 +1,9 @@
 import { buttonVariants } from "./ui/button";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
-import { DialogForm } from "./Dialog";
-import { FormRequest } from "./Forms";
+
+import { RequestForm } from "./request/RequestForm";
+import { DialogForm } from "./shared/Dialog";
 
 export const Home = () => {
   return (
@@ -39,7 +40,7 @@ export const Home = () => {
               label="Оставить заявку"
               className="px-8 py-4 md:px-12 md:py-8 bg-[#001561] text-white font-semibold text-base md:text-lg hover:bg-gray-500"
             >
-              <FormRequest />
+              <RequestForm />
             </DialogForm>
           </div>
         </div>

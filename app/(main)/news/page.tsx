@@ -1,9 +1,10 @@
-import { NewsPaginationController } from "@/components/NewsPaginationController";
+import { NewsPaginationController } from "@/components/news/NewsPaginationController";
 import { getNews } from "@/db/queries";
+import { useTranslations } from "next-intl";
 
-export const metadata = {
-  title: "Новости",
-};
+// export const metadata = {
+//   title: "Новости",
+// };
 
 const NewsPage = async () => {
   const newsData = getNews();

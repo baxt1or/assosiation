@@ -1,7 +1,7 @@
+import { NewsColumns } from "@/components/data-table/columns";
+import { DataTable } from "@/components/data-table/DataTable";
 import { getNews } from "@/db/queries";
-import { DataTable } from "@/components/DataTable";
-import { NewsColumns } from "@/components/colums";
-import { NewsForm } from "@/components/Forms";
+
 import Link from "next/link";
 
 const NewsPage = async () => {

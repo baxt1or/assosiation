@@ -1,33 +1,32 @@
 "use client";
 import { useState } from "react";
+import { News } from "@prisma/client";
 
+import { NewsCard } from "./NewsCard";
 import { Hook } from "../Pagination";
-import { redirect } from "next/navigation";
-import { LegislationCard } from "./LegislationCard";
-import { Document } from "@prisma/client";
 
-export const LegislationPaginationController = ({
-  data,
-}: {
-  data: Document[];
-}) => {
+export const NewsPaginationController = ({ data }: { data: News[] }) => {
   const [currentPage, setCurrentPage] = useState(1);
-  const [postsPerPage, setPostsPerPage] = useState(2);
+  const [postsPerPage, setPostsPerPage] = useState(6);
   const lastPostIndex = currentPage * postsPerPage;
   const firstPostIndex = lastPostIndex - postsPerPage;
-
-  if (!data) {
-    return redirect("/");
-  }
 
   const currentPosts = data.slice(firstPostIndex, lastPostIndex);
   return (
     <>
-      <div className="grid grid-cols-1 gap-4 mb-12">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-12">
         {currentPosts.map((post) => (
-          <LegislationCard key={post.id} document={post} />
+          <NewsCard
+            key={post.id}
+            id={post.id}
+            imgSrc={post.imgSrc!}
+            title={post.title}
+            createdAt={post.createdAt}
+            content={post.content}
+          />
         ))}
       </div>
+
       <Hook
         totalPosts={data.length}
         postsPerPage={postsPerPage}

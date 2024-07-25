@@ -1,5 +1,4 @@
-import { NewsForm } from "@/components/forms/NewsForm";
-import React from "react";
+import { NewsForm } from "@/components/news/NewsForm";
 
 const NewsPageCreateo = () => {
   return (

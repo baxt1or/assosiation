@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import NextTopLoader from "nextjs-toploader";
+import { Header } from "@/components/Navbar";
+import { Footers } from "@/components/Footers";
+import Wraper from "@/components/Wraper";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,13 +18,13 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
+interface Props {
+  params: { locale: string };
   children: React.ReactNode;
-}>) {
+}
+export default function RootLayout({ params, children }: Readonly<Props>) {
   return (
-    <html lang="en">
+    <html lang={params.locale}>
       <body className={inter.className}>
         <NextTopLoader color="#001561" showSpinner={false} />
         <div className="w-full h-full overflow-x-hidden">{children}</div>

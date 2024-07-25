@@ -32,7 +32,7 @@ model News {
   title    String
   content  String
   imgSrc   String @db.Text
- 
+
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt()
 }
@@ -78,13 +78,23 @@ model Ads {
 
 
 
+model Document {
+  id String @id @default(uuid())
+  title String @db.Text
+  content String @db.Text
+ 
+  file String @db.Text
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
 
 model Documents {
   id String @id @default(uuid())
   title String @db.Text
   content String @db.Text
-  category String @db.Text
-
+ 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }

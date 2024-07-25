@@ -1,6 +1,6 @@
+import { RequestColumns } from "@/components/data-table/columns";
+import { DataTable } from "@/components/data-table/DataTable";
 import { getRequests } from "@/db/queries";
-import { DataTable } from "@/components/DataTable";
-import { RequestColumns } from "@/components/colums";
 
 const RequestsPage = async () => {
   const requestData = getRequests();

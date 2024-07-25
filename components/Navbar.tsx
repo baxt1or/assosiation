@@ -6,8 +6,10 @@ import {
   HoverCardContent,
   HoverCardTrigger,
 } from "@/components/ui/hover-card";
-import { DropDownMenu } from "./DropDownmenu";
+
 import { ChevronDown } from "lucide-react";
+import { DropDownMenu } from "./shared/DropDownmenu";
+import LocalSwitcher from "./shared/Switcher";
 
 export const links = [
   { title: "Главная", href: "/" },
@@ -17,7 +19,6 @@ export const links = [
     submenu: [
       { title: "Об ассоциации", href: "/about" },
       { title: "Руководство", href: "/director" },
-      { title: "Рабочая группа", href: "/faculty" },
     ],
   },
   {

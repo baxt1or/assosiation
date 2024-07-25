@@ -1,4 +1,4 @@
-import { AboutData } from "@/components/AboutData";
+import { AboutData } from "@/components/about/AboutData";
 import { Phone } from "lucide-react";
 
 export const metadata = {

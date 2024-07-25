@@ -1,8 +1,8 @@
-import { createMember, updateMember } from "@/actions/members";
+import { updateMember } from "@/actions/members";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+
 import { getMember } from "@/db/queries";
-import Image from "next/image";
+
 import React from "react";
 
 const MemberIdPage = async ({ params }: { params: { id: string } }) => {

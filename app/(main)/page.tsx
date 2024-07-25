@@ -1,3 +1,4 @@
+import MainLayout from "@/components/MainLayout";
 import Wraper from "@/components/Wraper";
 
 export const metadata = {

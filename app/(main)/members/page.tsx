@@ -3,7 +3,7 @@ import {
   MemberCardDetails,
   MemberCardImgUrl,
   MemberCardTitle,
-} from "@/components/MemberCard";
+} from "@/components/member/MemberCard";
 import { getMembers } from "@/db/queries";
 
 const MembersPagination = async () => {

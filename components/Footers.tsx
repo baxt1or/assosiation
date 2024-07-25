@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { links } from "./Navbar";
 import { Facebook, Instagram, Twitter } from "lucide-react";
-import { AboutData } from "./AboutData";
+import { AboutData } from "./about/AboutData";
 
 const navigations = [
   { title: "Об Ассоциации", href: "/about" },
