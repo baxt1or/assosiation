@@ -13,6 +13,8 @@ import {
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
+import { LogoutButton } from "./user/LogoutButton";
+import Image from "next/image";
 
 export const links = [
   {
@@ -31,11 +33,6 @@ export const links = [
     icon: <File />,
   },
   {
-    label: "Рабочая",
-    href: "/dashboard/staff",
-    icon: <User />,
-  },
-  {
     label: "О нас",
     href: "/dashboard/about",
     icon: <InfoIcon />,
@@ -50,12 +47,17 @@ export const links = [
     href: "/dashboard/legislation",
     icon: <FileDownIcon />,
   },
+  {
+    label: "Users",
+    href: "/dashboard/users",
+    icon: <User />,
+  },
 ];
 
 export const DashboardSidebar = () => {
   const pathname = usePathname();
   return (
-    <div className="fixed top-0 bottom-0 left-0 w-[200px] bg-gray-50 z-[1000] flex flex-col items-start gap-y-6 h-full px-4 pt-28">
+    <div className="fixed top-0 bottom-0 left-0 w-[200px] bg-gray-50 z-[1000] flex flex-col items-start gap-y-6 h-full px-4 pt-12">
       {links.map((link) => {
         const Icon = link.icon;
         return (

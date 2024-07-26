@@ -9,3 +9,18 @@ export const documentSchema = z.object({
 });
 
 export type documentShemaType = z.infer<typeof documentSchema>;
+
+export const RegisterSchema = z.object({
+  username: z.string().min(1, "Username is required"),
+  email: z.string().min(1, "Email is required"),
+  password: z.string().min(1, "Password is required"),
+});
+
+export type RegisterSchemaType = z.infer<typeof RegisterSchema>;
+
+export const LoginSchema = z.object({
+  email: z.string().min(1, "Email is required"),
+  password: z.string().min(1, "Password is required"),
+});
+
+export type LoginSchemaType = z.infer<typeof LoginSchema>;

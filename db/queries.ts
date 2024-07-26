@@ -80,3 +80,28 @@ export const getDocum = cache(async (documentId: string) => {
   });
   return data;
 });
+
+export const getUsers = cache(async () => {
+  const data = await db.user.findMany();
+  return data;
+});
+
+export const getUserByEmail = async (email: string) => {
+  const data = await db.user.findFirst({
+    where: {
+      email: email,
+    },
+  });
+
+  return data;
+};
+
+export const getUserById = async (id: string) => {
+  const data = await db.user.findUnique({
+    where: {
+      id: id,
+    },
+  });
+
+  return data;
+};

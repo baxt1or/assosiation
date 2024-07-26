@@ -1,9 +1,9 @@
-import { Documents } from "@prisma/client";
 import { formatDateOnly } from "@/lib/utils";
 import { Link } from "@/navigation";
+import { Document } from "@prisma/client";
 
 interface Props {
-  document: Documents;
+  document: Document;
 }
 export const LegislationCard = ({ document }: Props) => {
   if (!document) {

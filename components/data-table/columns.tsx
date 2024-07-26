@@ -1,7 +1,15 @@
 "use client";
 
 import { formatDate } from "@/lib/utils";
-import { About, Ads, Document, Member, News, Request } from "@prisma/client";
+import {
+  About,
+  Ads,
+  Document,
+  Member,
+  News,
+  Request,
+  User,
+} from "@prisma/client";
 import { ColumnDef } from "@tanstack/react-table";
 import Link from "next/link";
 import { PenBox } from "lucide-react";
@@ -9,6 +17,7 @@ import { DeleteNewsButton } from "../news/DeleteNewsButton";
 import { DeletMemberButton } from "../member/DeleteMemberButton";
 import { DeleteAboutDataButton } from "../about/DeleteAboutDataButton";
 import { DeleteDocument } from "../legislation/DeleteLegislation";
+import { DeleteUserButton } from "../dashboard/user/DeleteUserButton";
 
 export const NewsColumns: ColumnDef<News>[] = [
   {
@@ -307,6 +316,42 @@ export const DocumentColumns: ColumnDef<Document>[] = [
             <PenBox className="w-5 h-5 text-green-500" />
           </Link>
           <DeleteDocument id={data_id} />
+        </div>
+      );
+    },
+  },
+];
+
+export const UserDataColums: ColumnDef<User>[] = [
+  {
+    accessorKey: "username",
+    header: "Username",
+  },
+  {
+    accessorKey: "email",
+    header: "Email",
+  },
+  {
+    accessorKey: "id",
+    header: "ID",
+    cell: ({ row }) => {
+      const data_id = row.getValue("id") as string;
+      return data_id;
+    },
+  },
+  {
+    id: "actions",
+    enableHiding: false,
+    accessorKey: "id",
+    header: "Удалить",
+    cell: ({ row }) => {
+      const data_id = row.getValue("id") as string;
+      return (
+        <div className="flex gap-2">
+          {/* <Link href={`/dashboard/news/edit/${data_id}`}>
+            <PenBox className="w-5 h-5 text-green-500" />
+          </Link> */}
+          <DeleteUserButton id={data_id} />
         </div>
       );
     },
