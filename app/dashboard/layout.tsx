@@ -4,15 +4,18 @@ import NextTopLoader from "nextjs-toploader";
 import { auth } from "@/lib/auth/auth";
 import { redirect } from "next/navigation";
 import { SidebarNavbar } from "@/components/dashboard/SidebarNavbar";
-export const metadata = {
-  title: "Dashboard",
-};
+import { Metadata } from "next";
 
+export const metadata: Metadata = {
+  title: "Dashboard",
+  description:
+    "Ассоциация Представительств Иностранных Фармацевтических Компаний и Производителей Республики Узбекистан является негосударственной некоммерческой организацией и представляет на рынке Узбекистана профессиональные и деловые интересы международных фармацевтических компаний-производителей оригинальных фармацевтических препаратов и медицинского оборудования",
+  icons: {
+    icon: "/logo.png",
+  },
+};
 const DashboardLayout = async ({ children }: { children: React.ReactNode }) => {
   const session = await auth();
-
-  console.log(session);
-
   if (!session) {
     redirect("/auth/sign-in");
   }

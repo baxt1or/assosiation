@@ -10,7 +10,7 @@ export const LogoutButton = () => {
         await signOut();
       }}
     >
-      <Button type="submit">Logout</Button>
+      <Button type="submit">Выйти</Button>
     </form>
   );
 };

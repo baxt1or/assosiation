@@ -89,3 +89,28 @@ export const deleteUser = async (id: string) => {
   revalidatePath("/dashboard/user");
   return data;
 };
+
+export const updateUser = async (id: string, values: RegisterSchemaType) => {
+  const validFileds = RegisterSchema.safeParse(values);
+
+  if (!validFileds.success) {
+    return { error: "Invalid Credentials" };
+  }
+
+  const { username, email, password } = validFileds.data;
+
+  await db.user.update({
+    where: {
+      id: id,
+    },
+    data: {
+      username: username,
+      email: email,
+      password: password,
+    },
+  });
+
+  revalidatePath("/dashboard/user");
+  revalidatePath("/auth/sign-in");
+  redirect("/dashboard/user");
+};

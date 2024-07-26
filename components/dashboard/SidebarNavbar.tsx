@@ -6,10 +6,10 @@ export const SidebarNavbar = () => {
     <header className="fixed top-0 left-[200px] right-0 z-10 bg-white border-b">
       <nav className="p-4 flex items-center justify-between">
         <Link
-          href={"/"}
+          href={"/en"}
           className="text-lg font-normal text-blue-400 hover:underline hover:text-blue-600"
         >
-          Go to Website
+          Главную страницу
         </Link>
         <LogoutButton />
       </nav>

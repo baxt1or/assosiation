@@ -9,7 +9,7 @@ const DashboardUsersPage = async () => {
   return (
     <div className="mt-24 max-w-5xl mx-auto">
       <div className="flex items-center justify-between">
-        <h1 className="text-4xl text-black font-extrabold">Users</h1>
+        <h1 className="text-4xl text-black font-extrabold">Пользователь</h1>
 
         <RegisterForm />
       </div>

@@ -211,7 +211,7 @@ export const AboutDataColums: ColumnDef<About>[] = [
       const data_id = row.getValue("id") as string;
       return (
         <div className="flex gap-2">
-          <Link href={`/dashboard/news/edit/${data_id}`}>
+          <Link href={`/dashboard/about/${data_id}`}>
             <PenBox className="w-5 h-5 text-green-500" />
           </Link>
           <DeleteAboutDataButton id={data_id} />
@@ -312,7 +312,7 @@ export const DocumentColumns: ColumnDef<Document>[] = [
       const data_id = row.getValue("id") as string;
       return (
         <div className="flex gap-2">
-          <Link href={`/dashboard/news/edit/${data_id}`}>
+          <Link href={`/dashboard/legislation/${data_id}`}>
             <PenBox className="w-5 h-5 text-green-500" />
           </Link>
           <DeleteDocument id={data_id} />
@@ -343,16 +343,13 @@ export const UserDataColums: ColumnDef<User>[] = [
     id: "actions",
     enableHiding: false,
     accessorKey: "id",
-    header: "Удалить",
+    header: "Edit",
     cell: ({ row }) => {
       const data_id = row.getValue("id") as string;
       return (
-        <div className="flex gap-2">
-          {/* <Link href={`/dashboard/news/edit/${data_id}`}>
-            <PenBox className="w-5 h-5 text-green-500" />
-          </Link> */}
-          <DeleteUserButton id={data_id} />
-        </div>
+        <Link href={`/dashboard/users/${data_id}`}>
+          <PenBox className="w-5 h-5 text-green-500" />
+        </Link>
       );
     },
   },

@@ -34,20 +34,20 @@ const LoginForm = () => {
     setIsPending(async () => {
       await login(values).then((data) => {
         form.reset();
-        router.push("/dashboard/users");
+        router.push("/dashboard");
       });
     });
   }
 
   return (
-    <div className="max-w-[400px] mx-auto h-screen flex flex-col items-center justify-center">
+    <div className="max-w-[450px] mx-auto h-screen flex flex-col items-center justify-center ">
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(onSubmit)}
-          className="space-y-4 w-full"
+          className="space-y-6 w-full border border-gray-200 p-4 rounded-3xl py-6"
         >
-          <h1 className="text-4xl text-center text-black font-bold">
-            Welcome Back
+          <h1 className="text-5xl text-center text-black font-bold">
+            ВХОД В ПАНЕЛЬ
           </h1>
 
           <FormField
@@ -57,7 +57,11 @@ const LoginForm = () => {
             render={({ field }) => (
               <FormItem>
                 <FormControl>
-                  <Input placeholder="Email" {...field} />
+                  <Input
+                    placeholder="Пользователь"
+                    {...field}
+                    className="text-2xl placeholder:text-xl p-8"
+                  />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -71,22 +75,30 @@ const LoginForm = () => {
             render={({ field }) => (
               <FormItem>
                 <FormControl>
-                  <Input placeholder="*******" {...field} />
+                  <Input
+                    placeholder="Пароль"
+                    {...field}
+                    className="text-2xl placeholder:text-xl p-8"
+                  />
                 </FormControl>
                 <FormMessage />
               </FormItem>
             )}
           />
 
-          <Button type="submit" className="w-full" disabled={isPending}>
+          <Button type="submit" className="w-full p-4" disabled={isPending}>
             {isPending ? (
               <Loader2Icon className="h-4 w-4 animate-spin" />
             ) : (
-              "Login"
+              <p className="text-lg uppercase">Вход в систему</p>
             )}
           </Button>
         </form>
       </Form>
+
+      <p className="text-center md:text-left text-lg mt-4">
+        &copy; {new Date().getFullYear()} Все права защищены
+      </p>
     </div>
   );
 };

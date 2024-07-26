@@ -33,12 +33,7 @@ export const links = [
     icon: <File />,
   },
   {
-    label: "О нас",
-    href: "/dashboard/about",
-    icon: <InfoIcon />,
-  },
-  {
-    label: "Reklama",
+    label: "Реклама",
     href: "/dashboard/reklama",
     icon: <BookMarked />,
   },
@@ -48,7 +43,12 @@ export const links = [
     icon: <FileDownIcon />,
   },
   {
-    label: "Users",
+    label: "О нас",
+    href: "/dashboard/about",
+    icon: <InfoIcon />,
+  },
+  {
+    label: "Пользователь",
     href: "/dashboard/users",
     icon: <User />,
   },
@@ -68,15 +68,14 @@ export const DashboardSidebar = () => {
             <p className="text-md font-medium text-black h-5 w-5 mr-2">
               {Icon}
             </p>
-            <Link href={link.href}>
-              <p
-                className={cn(
-                  "text-xl font-bold text-black mt-2",
-                  pathname == link.href && "text-gray-500"
-                )}
-              >
-                {link.label}
-              </p>
+            <Link
+              href={link.href}
+              className={cn(
+                "text-xl font-bold text-black mt-2 hover:opacity-50",
+                pathname == link.href && "text-gray-500"
+              )}
+            >
+              {link.label}
             </Link>
           </div>
         );
