@@ -1,12 +1,11 @@
 import { updateNews } from "@/actions/news";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
-import { getNewsSingle } from "@/db/queries";
 import { redirect } from "next/navigation";
-import React from "react";
+import { getSingleNews } from "@/db/queries";
 
-const NewsIdPage = async ({ params }: { params: { id: string } }) => {
-  const news = await getNewsSingle(params.id);
+const NewsIdPage = async ({ params }: { params: { newsId: string } }) => {
+  const news = await getSingleNews(params.newsId);
 
   if (!news) {
     redirect("/dashboard/news");

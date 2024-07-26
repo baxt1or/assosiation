@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { redirect } from "next/navigation";
 import parse from "html-react-parser";
-import { getSingleNews } from "@/lib/queries";
+import { getSingleNews } from "@/db/queries";
 
 const NewsIdPage = async ({ params }: { params: { newsId: string } }) => {
   const news = await getSingleNews(params.newsId);
