@@ -21,11 +21,16 @@ export const LegislationPaginationController = ({
   }
 
   const currentPosts = data.slice(firstPostIndex, lastPostIndex);
+
   return (
     <>
       <div className="grid grid-cols-1 gap-4 mb-12">
         {currentPosts.map((post) => (
-          <LegislationCard key={post.id} document={post} />
+          <LegislationCard
+            key={post.id}
+            document={post}
+            
+          />
         ))}
       </div>
       <Hook

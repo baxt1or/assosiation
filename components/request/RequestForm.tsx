@@ -20,7 +20,25 @@ import { Input } from "../ui/input";
 import { Button } from "../ui/button";
 import { Label } from "../ui/label";
 
-export const RequestForm = () => {
+export interface RequestFormProps {
+  header: string;
+  full_name: string;
+  occupation: string;
+  email: string;
+  company_name: string;
+  phone_number: string;
+  saveButton: string;
+}
+
+export const RequestForm = ({
+  header,
+  full_name,
+  occupation,
+  email,
+  company_name,
+  phone_number,
+  saveButton,
+}: RequestFormProps) => {
   const router = useRouter();
 
   const form = useForm<formSchema>({
@@ -44,8 +62,8 @@ export const RequestForm = () => {
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-        <Label className="text-3xl text-center text-black font-bold">
-          Оставить заявку
+        <Label className="text-3xl text-center  text-black font-bold">
+          {header}
         </Label>
 
         <FormField
@@ -55,7 +73,7 @@ export const RequestForm = () => {
           render={({ field }) => (
             <FormItem>
               <FormControl>
-                <Input placeholder="Ф.И.О" {...field} />
+                <Input placeholder={full_name} {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -68,7 +86,7 @@ export const RequestForm = () => {
           render={({ field }) => (
             <FormItem>
               <FormControl>
-                <Input placeholder="Должность" {...field} />
+                <Input placeholder={occupation} {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -81,7 +99,7 @@ export const RequestForm = () => {
           render={({ field }) => (
             <FormItem>
               <FormControl>
-                <Input placeholder="Компания" {...field} />
+                <Input placeholder={company_name} {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -94,7 +112,7 @@ export const RequestForm = () => {
           render={({ field }) => (
             <FormItem>
               <FormControl>
-                <Input placeholder="Email" {...field} />
+                <Input placeholder={email} {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -107,7 +125,7 @@ export const RequestForm = () => {
           render={({ field }) => (
             <FormItem>
               <FormControl>
-                <Input placeholder="Номер телефона" {...field} />
+                <Input placeholder={phone_number} {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -121,7 +139,7 @@ export const RequestForm = () => {
           {form.formState.isSubmitting ? (
             <Loader2 className="h-4 w-4 animate-spin" />
           ) : (
-            "Отпрпавить"
+            <p>{saveButton}</p>
           )}
         </Button>
       </form>

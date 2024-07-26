@@ -1,10 +1,10 @@
 import Image from "next/image";
-import Link from "next/link";
 
 import { cn, formatDateOnly } from "@/lib/utils";
 
 import parse from "html-react-parser";
 import { buttonVariants } from "../ui/button";
+import { Link } from "@/navigation";
 
 type Props = {
   id: string;
@@ -43,7 +43,10 @@ export const NewsCard = ({ id, title, imgSrc, createdAt, content }: Props) => {
             </p>
 
             <Link
-              href={`/news/${id}`}
+              href={{
+                pathname: "/news/[newsId]",
+                params: { newsId: id },
+              }}
               className={cn(
                 buttonVariants({ variant: "outline", size: "sm" }),
                 "text-gray-500 text-xs"

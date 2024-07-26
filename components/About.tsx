@@ -1,29 +1,27 @@
 import { cn } from "@/lib/utils";
-import Link from "next/link";
+
 import React from "react";
 import { buttonVariants } from "./ui/button";
+import { useTranslations } from "next-intl";
+import { Link } from "@/navigation";
 
 export const About = () => {
+  const t = useTranslations("AboutSection");
   return (
     <section className="flex flex-col gap-y-8 items-center justify-center py-32">
       <h1 className="text-2xl md:text-4xl font-bold text-center">
-        Полная информация о работе ассоциации
+        {t("title")}
       </h1>
 
       <p className="text-sm font-medium text-center text-muted-foreground max-w-5xl mx-auto">
-        Ассоциация Представительств Иностранных Фармацевтических Компаний и
-        Производителей Республики Узбекистан является негосударственной
-        некоммерческой организацией и представляет на рынке Узбекистана
-        профессиональные и деловые интересы международных фармацевтических
-        компаний-производителей оригинальных фармацевтических препаратов и
-        медицинского оборудования.
+        {t("content")}
       </p>
 
       <Link
         href={"/about"}
         className={cn(buttonVariants({ variant: "outline" }))}
       >
-        Подробнее
+        {t("button")}
       </Link>
     </section>
   );

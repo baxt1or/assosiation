@@ -1,10 +1,16 @@
 import { NewsPaginationController } from "@/components/news/NewsPaginationController";
+import { NewsHeader } from "@/components/others/NewsHeader";
 import { getNews } from "@/db/queries";
-import { useTranslations } from "next-intl";
 
-// export const metadata = {
-//   title: "Новости",
-// };
+import { getTranslations } from "next-intl/server";
+
+export async function generateMetadata() {
+  const t = await getTranslations("NewsPage");
+
+  return {
+    title: t("metadata"),
+  };
+}
 
 const NewsPage = async () => {
   const newsData = getNews();
@@ -13,7 +19,7 @@ const NewsPage = async () => {
   return (
     <section className="h-auto  pb-8">
       <div className="max-w-7xl mx-auto flex flex-col gap-y-8 pt-28 p-4">
-        <h1 className="text-4xl font-semibold text-[#001561]">Новости</h1>
+        <NewsHeader />
         <NewsPaginationController data={news} />
       </div>
     </section>

@@ -1,0 +1,124 @@
+{
+  "IndexPage": {
+    "metadata": "Home",
+    "title": "Association of Representative Offices of Foreign Pharmaceutical Companies and Manufacturers in the Republic of Uzbekistan",
+    "button": "News",
+    "request": "Submit a request"
+  },
+  "NotFoundPage": {
+    "title": "Page Not Found",
+    "description": "Oops! It seems like you've stumbled upon a page that doesn't exist. Don't worry, our internationalization magic is still hard at work on other parts of the app. Feel free to navigate back to explore more!"
+  },
+  "CompaniesSection": {
+    "header": "Companies",
+    "buttonLink": "View All"
+  },
+  "NewsSection": {
+    "header": "Latest News"
+  },
+  "Footer": {
+    "title": "Association of Representative Offices of Foreign Pharmaceutical Companies and Manufacturers in the Republic of Uzbekistan",
+    "about": "About US",
+    "aboutLink": "About the Association",
+    "guidence": "Leadership",
+    "members": "Companies",
+    "navigation": "Navigation",
+    "home": "Home",
+    "membership": "Membership",
+    "news": "News",
+    "legislation": "Legislation",
+    "contact": "Contact",
+    "social": "Social Networks",
+    "copyright": "All rights reserved",
+    "developer": "Developed by",
+    "engineer": "Baxtiyor Bekmurodov"
+  },
+  "About": {
+    "metaData": "About",
+    "title": "Association of Representative Offices of Foreign Pharmaceutical Companies and Manufacturers in the Republic of Uzbekistan"
+  },
+  "NavbarLinks": {
+    "home": "Home",
+    "about": "About US",
+    "guidence": "Leadership",
+    "members": "Companies",
+    "membership": "Membership",
+    "news": "News",
+    "legislation": "Legislation",
+    "contact": "Contacts"
+  },
+  "AboutPage": {
+    "title": "Association of Representative Offices of Foreign Pharmaceutical Companies and Manufacturers in the Republic of Uzbekistan",
+    "h1": "The Tashkent City Association of Representative Offices of Foreign Pharmaceutical Companies and Manufacturers is a non-governmental, non-profit organization that represents the professional and business interests of international pharmaceutical companies producing original pharmaceutical products and medical equipment in the Uzbek market.",
+    "h2": "The main goals and objectives of the association are: to promote the creation of an open, modern, and ethical pharmaceutical market in the Republic of Uzbekistan; to exercise public oversight over the adherence to ethical norms in the pharmaceutical market; to attract foreign manufacturers for further development of pharmaceutical activities in the Republic of Uzbekistan; to participate in the development of targeted legislative and regulatory projects in the field of health protection and drug provision to the country's population. Additionally, it is crucial to cooperate and exchange information on health issues with interested bodies and institutions, international scientific and professional organizations, and to provide legal and other necessary support.",
+    "h3": "The association was founded in July 2003, and currently, it has more than 30 of the world's largest pharmaceutical companies as members, which have accredited representative offices in the Republic of Uzbekistan.",
+    "h4": "The member companies of the Association control a significant share of the global production and sales of pharmaceutical products. With their medical and scientific expertise, they play a vital role in supplying the Republic with necessary products and contribute to the renewal of the scientific and production potential of our pharmaceutical industry. By producing modern and highly effective drugs, the member companies of the Association provide the medical community and the population at large with access to the most advanced pharmaceutical products and medical supplies available on the global market today.",
+    "h5": "We hope that our Association, in close cooperation with all interested institutions, will undoubtedly make an important contribution to further liberalization of the pharmaceutical sector and healthcare, which will bring new quality to the health of the population of our Republic."
+  },
+  "AboutSection": {
+    "title": "Complete Information About the Work of Association",
+    "content": "The Association of Representative Offices of Foreign Pharmaceutical Companies and Manufacturers in the Republic of Uzbekistan is a non-governmental, non-profit organization that represents the professional and business interests of international pharmaceutical companies producing original pharmaceutical products and medical equipment in the Uzbek market.",
+    "button": "Read More"
+  },
+
+  "MembershipSection": {
+    "metaData": "Membership",
+    "title": "CONDITIONS FOR JOINING THE ASSOCIATION",
+    "order1": "Full agreement with the membership conditions (Charter Regulations)",
+    "order2": "Manufacturer's accreditation certificate (copy of the document)",
+    "order3": "Company profile",
+    "order4": "Manufacturer's GMP certification documents",
+    "order5": "Acceptance of the Marketing Practices Code (developed by the Association)",
+    "order6": "Information about medical representatives (copy of diploma, other certificates)",
+    "order7": "Entrance (annual) membership fee of 11 million UZS",
+    "order8": "Application for joining the Association.",
+    "order9": "Interview",
+    "emergency": "If you are interested, you can send your application to:",
+    "email": "pharm.association@mail.ru",
+    "text": "According to the Charter, the issue of joining the Association is considered by the Board members."
+  },
+
+  "GuidancePage": {
+    "metadata": "Leadership",
+    "full_name1": "Mukhabat Akbarovna Askarova",
+    "current_position1": "Director",
+    "full_name2": "Natalya Gennadyevna Litvinenko",
+    "current_position2": "Executive Director",
+    "organization": "Association of Representative Offices of Foreign Pharmaceutical Companies and Manufacturers in the Republic of Uzbekistan"
+  },
+  "CompanyPage": {
+    "metadata": "Members",
+    "title": "Companies"
+  },
+  "NewsPage": {
+    "metadata": "News",
+    "title": "News"
+  },
+  "ButtonComponent": {
+    "readButton": "Read more"
+  },
+  "LegislationPage": {
+    "metadata": "Legislation",
+    "header": "Legislation of the Republic of Uzbekistan"
+  },
+  "ContactsPage": {
+    "metadata": "Contacts",
+    "header": "Contacts",
+    "full_name1": "Mukhabat Akbarovna Askarova",
+    "current_position1": "Director of the Association",
+    "full_name2": "Natalya Gennadyevna Litvinenko",
+    "current_position2": "Executive Director"
+  },
+  "RequestFormSection": {
+    "header": "Leave a Request",
+    "full_name": "Full Name",
+    "occupation": "Position",
+    "company_name": "Company",
+    "email": "Email",
+    "phone_number": "Phone Number",
+    "saveButton": "Send"
+  },
+  "ReadButton": {
+    "read_button": "Read more"
+  }
+}
